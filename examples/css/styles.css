@@ -1,0 +1,38 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+
+
+.logo {
+    text-align: center;
+    margin: 0 1.5%;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+h1{
+    text-align: center;
+    border-style:solid;
+    border-radius: 5px;
+}
+
+section{
+    float: left;
+    margin: 0 1.5%;
+    width: 46%;
+    border-radius: 5px;
+}
+
+aside {
+    float:right;
+    margin: 0 1.5%;
+    width: 46%;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    clear: both;
+}
