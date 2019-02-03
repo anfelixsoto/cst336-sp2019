@@ -43,10 +43,12 @@ h2 {
     border-radius: 5px;
 }
 
-h3, h4, h5 {
-   text-align: center;
-   border-style:solid;
-   border-radius: 5px;
+h3,
+h4,
+h5 {
+    text-align: center;
+    border-style: solid;
+    border-radius: 5px;
 }
 
 section {
@@ -80,4 +82,3 @@ footer {
     text-align: center;
     clear: both;
 }
-
