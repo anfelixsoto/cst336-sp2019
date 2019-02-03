@@ -1,0 +1,83 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+header,
+main,
+nav,
+footer {
+    text-align: center;
+}
+
+nav a {
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 15px;
+    padding-bottom: 4px;
+    font-size: 1.8em;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    border-bottom: 2px grey solid;
+    font-size: 2em;
+    transition: .9s;
+}
+
+.rounded {
+    border-radius: 30px;
+}
+
+h1 {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 4em;
+    margin-bottom: 0px;
+}
+
+h2 {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+h3, h4, h5 {
+   text-align: center;
+   border-style:solid;
+   border-radius: 5px;
+}
+
+section {
+    float: left;
+    margin: 0 1.5%;
+    width: 46%;
+    border-radius: 5px;
+}
+
+aside {
+    float: right;
+    margin: 0 1.5%;
+    width: 46%;
+}
+
+aboutSection {
+    float: left;
+    margin: 0 1.5%;
+    width: 45%;
+    border-radius: 5px;
+}
+
+aboutAside {
+    float: right;
+    margin: 0 1.5%;
+    width: 45%;
+}
+
+
+footer {
+    text-align: center;
+    clear: both;
+}
+
