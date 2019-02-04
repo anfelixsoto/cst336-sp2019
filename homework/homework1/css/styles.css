@@ -77,6 +77,12 @@ aboutAside {
     width: 45%;
 }
 
+img:hover {
+    transform: scale(1.5);
+    transition: transform .2s;
+}
+
+
 
 footer {
     text-align: center;
