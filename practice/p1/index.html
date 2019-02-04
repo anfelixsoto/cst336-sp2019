@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Seasons</title>
+  <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans%7CMajor+Mono+Display" rel="stylesheet">
+  <style>
+    h1 {
+      color: yellow;
+      text-align: center;
+
+    }
+
+    body {
+      font-family: "Major Mono Display", monospace;
+      background-color: black;
+    }
+
+    img:hover {
+      transform: scale(1.5);
+      transition: transform .2s;
+    }
+
+    .cell {
+      width: 300px;
+      height: 300px;
+      border: solid 0px red;
+      margin: 10px;
+      text-align: center;
+      color: white;
+    }
+
+    #row1 {
+      display: flex;
+      justify-content: center;
+      border-bottom: solid white;
+    }
+
+    #row2 {
+      display: flex;
+      justify-content: center;
+    }
+
+    #topLeft {
+      border-top-left-radius: 45px;
+    }
+
+    #bottomLeft {
+      border-bottom-left-radius: 45px;
+    }
+
+    #topRight {
+      border-top-right-radius: 45px;
+    }
+
+    #bottomRight {
+      border-bottom-right-radius: 45px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>The Seasons</h1>
+  <div id="row1">
+    <div class="cell">
+      <a href="https://en.wikipedia.org/wiki/Summer"><img src="img/summer.png" id="topLeft"></a>
+      <p>Summer</p>
+    </div>
+    <div class="cell">
+      <a href="https://en.wikipedia.org/wiki/Fall"><img src="img/fall.png" id="topRight"></a>
+      <p>Fall</p>
+    </div>
+  </div>
+  <div id="row2">
+    <div class="cell">
+      <a href="https://en.wikipedia.org/wiki/Winter"><img src="img/winter.jpeg" id="bottomLeft"></a>
+      <p>Winter</p>
+    </div>
+    <div class="cell">
+      <a href="https://en.wikipedia.org/wiki/Spring"><img src="img/spring.png" id="bottomRight"></a>
+      <p>Spring</p>
+    </div>
+  </div>
+</body>
+
+</html>
