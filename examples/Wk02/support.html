@@ -5,7 +5,6 @@
     <title>Support.html</title>
 
     <style>
-    
         html,
         body {
             width: 100%;
@@ -17,26 +16,30 @@
         }
 
         search button img,
-        article buttom img {
+        .help,
+        .help img {
             height: 10px;
         }
 
-        .help {
-            position: fixed;
-            bottom: 10px;
+        .container {
+            padding-right: 200px;
+        }
+
+        article span {
+            height: 100%;
+        }
+
+        section {
+            position: relative;
+        }
+
+        button.help {
+            position: absolute;
+            bottom: 100px;
             right: 10px;
         }
-
-        .container {
-            padding-right: 100px;
-        }
-
-        footer {
-            text-align: center;
-        }
-        
     </style>
-    
+
 </head>
 
 <body>
@@ -45,46 +48,67 @@
     <div class="container">
         <main>
             <header>
-                <img src="img/support.jpg" </header>
-                <content>
-                    <section>
-                        <search>
-                            <input type="text" />
-                            <button type="button" value="?">
+                <img src="img/support.jpg" />
+            </header>
+
+            <content>
+                <section>
+                    <search>
+                        <input type="text" />
+                        <button type="button" value="?">
                             <img src="img/search.png" />
                         </button>
-                        </search>
-                        <article class="bottom">
-                            <span>
-                        Lorem Ipsum "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-                        "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
-                        Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit.Donec fermentum gravida interdum.In a velit ultricies, venenatis lorem sed, ornare tortor.Sed facilisis nibh eget tortor fringilla, at sollicitudin libero egestas.Maecenas urna risus, pellentesque sed placerat ut,
-                            blandit in lacus.In ac mattis metus, sit amet ullamcorper augue.Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-                        Nunc a leo consectetur sapien pretium vehicula at nec leo.Quisque dui sapien,
-                            ultricies dignissim cursus eu, pretium nec velit.Mauris vel rhoncus justo.Integer at enim nunc.Curabitur hendrerit sapien in odio sodales porta.Maecenas vitae tincidunt magna.Morbi vel pharetra mi, nec venenatis ipsum.Ut sed
-                        venenatis ipsum, sit amet laoreet nunc.Sed maximus gravida sagittis.Cras bibendum ut nunc ut porttitor.Pellentesque at ultricies lectus.Etiam sodales, augue vel porta rutrum, tellus nulla sollicitudin tortor, imperdiet auctor dolor
-                        nisi vitae metus.Nunc commodo lacinia tincidunt.Aliquam commodo nisi eget metus fringilla, non hendrerit magna hendrerit.Duis ut tincidunt neque, sed dictum neque.Mauris ipsum tortor, maximus sit amet felis a, blandit egestas diam.
-                        Nam feugiat tincidunt accumsan.Nullam nisl libero, pulvinar vel viverra sit amet, vehicula et quam.Praesent a ipsum at purus faucibus luctus nec a diam.Nam consectetur et nisi et commodo.Maecenas aliquam varius est, molestie mollis
-                        massa blandit in .Etiam id suscipit mauris.Pellentesque ultrices turpis vel tempor malesuada.Nulla placerat, eros a suscipit cursus, enim velit fringilla nisl, quis commodo justo libero sit amet lacus.Curabitur varius sit amet ante
-                        vitae iaculis.Donec eu faucibus metus, a blandit erat.Vestibulum et enim finibus, lacinia metus sit amet, elementum risus.Aliquam a felis vitae quam viverra volutpat.Sed id eros metus.Duis eget scelerisque turpis.Donec mollis
-                        at libero blandit euismod.Proin at suscipit enim.Maecenas sit amet imperdiet est.Ut quis nisl vehicula, imperdiet velit cursus, feugiat mauris.Ut id dolor a risus rutrum malesuada.Suspendisse potenti.Sed metus erat, aliquam ac
-                        lobortis eu, aliquam eget ipsum.Maecenas malesuada ligula et mauris vehicula malesuada.Sed fringilla felis et eros varius facilisis.Pellentesque tempus lectus et posuere ornare.Integer placerat, quam a elementum accumsan, nisi
-                        enim interdum ante, vitae rutrum purus sapien in ipsum.Pellentesque dapibus elit sit amet ligula interdum, at semper nibh volutpat.Suspendisse nulla sem, eleifend maximus nisl scelerisque, facilisis tincidunt ipsum.Nunc porta massa
-                        ac ante rhoncus, volutpat ultricies ligula dapibus.Nunc rhoncus ipsum vitae dictum ultrices.Nunc suscipit risus tortor, nec commodo magna aliquam vitae.Morbi maximus eu purus non laoreet.Nulla a iaculis nisi.Sed at tincidunt turpis.
-                        Vivamus fringilla viverra turpis sit amet congue.
-                    </span>
-            
-                            <button type="button" class="help">
-                        <img src= "img/help.png" />
-                    </button>
+                    </search>
+                    <article class="bottom">
+                        <span>
+                                <p>
+                                    Lorem Ipsum "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+                                    "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit.Donec fermentum gravida interdum.In a velit ultricies, venenatis lorem sed, ornare tortor.Sed facilisis nibh eget tortor fringilla, at sollicitudin libero egestas.Maecenas urna risus, pellentesque sed placerat ut,
+                                    blandit in lacus.In ac mattis metus, sit amet ullamcorper augue.Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                                    Nunc a leo consectetur sapien pretium vehicula at nec leo.Quisque dui sapien,
+                                    ultricies dignissim cursus eu, pretium nec velit.Mauris vel rhoncus justo.Integer at enim nunc.Curabitur hendrerit sapien in odio sodales porta.Maecenas vitae tincidunt magna.Morbi vel pharetra mi, nec venenatis ipsum.Ut sed
+                                    venenatis ipsum, sit amet laoreet nunc.Sed maximus gravida sagittis.Cras bibendum ut nunc ut porttitor.Pellentesque at ultricies lectus.Etiam sodales, augue vel porta rutrum, tellus nulla sollicitudin tortor, imperdiet auctor dolor
+                                    nisi vitae metus.Nunc commodo lacinia tincidunt.Aliquam commodo nisi eget metus fringilla, non hendrerit magna hendrerit.Duis ut tincidunt neque, sed dictum neque.Mauris ipsum tortor, maximus sit amet felis a, blandit egestas diam.
+                                    Nam feugiat tincidunt accumsan.Nullam nisl libero, pulvinar vel viverra sit amet, vehicula et quam.Praesent a ipsum at purus faucibus luctus nec a diam.Nam consectetur et nisi et commodo.Maecenas aliquam varius est, molestie mollis
+                                    massa blandit in .Etiam id suscipit mauris.Pellentesque ultrices turpis vel tempor malesuada.Nulla placerat, eros a suscipit cursus, enim velit fringilla nisl, quis commodo justo libero sit amet lacus.Curabitur varius sit amet ante
+                                    vitae iaculis.Donec eu faucibus metus, a blandit erat.Vestibulum et enim finibus, lacinia metus sit amet, elementum risus.Aliquam a felis vitae quam viverra volutpat.Sed id eros metus.Duis eget scelerisque turpis.Donec mollis
+                                    at libero blandit euismod.Proin at suscipit enim.Maecenas sit amet imperdiet est.Ut quis nisl vehicula, imperdiet velit cursus, feugiat mauris.Ut id dolor a risus rutrum malesuada.Suspendisse potenti.Sed metus erat, aliquam ac
+                                    lobortis eu, aliquam eget ipsum.Maecenas malesuada ligula et mauris vehicula malesuada.Sed fringilla felis et eros varius facilisis.Pellentesque tempus lectus et posuere ornare.Integer placerat, quam a elementum accumsan, nisi
+                                    enim interdum ante, vitae rutrum purus sapien in ipsum.Pellentesque dapibus elit sit amet ligula interdum, at semper nibh volutpat.Suspendisse nulla sem, eleifend maximus nisl scelerisque, facilisis tincidunt ipsum.Nunc porta massa
+                                    ac ante rhoncus, volutpat ultricies ligula dapibus.Nunc rhoncus ipsum vitae dictum ultrices.Nunc suscipit risus tortor, nec commodo magna aliquam vitae.Morbi maximus eu purus non laoreet.Nulla a iaculis nisi.Sed at tincidunt turpis.
+                                    Vivamus fringilla viverra turpis sit amet congue.
+                                </p>
+                                
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac vestibulum dolor, at aliquam mauris. Fusce vel commodo erat, eget varius enim. Nullam nec imperdiet metus. Nam aliquet augue ut facilisis bibendum. Curabitur vitae pellentesque augue.
+                                    Nam sed arcu sed metus interdum facilisis ac non nisi. Morbi eu diam semper, ullamcorper urna nec, iaculis tellus. In hac habitasse platea dictumst. Nullam sagittis magna nunc. Etiam luctus purus orci. Sed ut leo odio. Fusce sed lacus in quam iaculis
+                                    pharetra. Duis ut porttitor libero, sed eleifend est. Quisque ultrices hendrerit diam, scelerisque accumsan sapien. Morbi lacinia arcu non velit suscipit varius. Phasellus vitae risus sit amet erat dapibus euismod id sed augue. Cras pretium mauris
+                                    ut eleifend pharetra. Duis consequat auctor arcu et vulputate. Sed a arcu turpis. Sed in nisi tempus, malesuada massa ut, consectetur tortor. Nam ac dolor faucibus, varius augue non, sagittis eros. Aliquam tincidunt, neque a posuere gravida, leo risus
+                                    semper mauris, sed fringilla justo ligula eu arcu. Etiam eget malesuada arcu. Maecenas tempor suscipit purus et aliquam. Duis euismod erat non turpis sagittis viverra. Donec malesuada gravida massa sit amet pellentesque. Vestibulum ante ipsum primis
+                                    in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean semper lacus sapien, vitae euismod purus mollis quis. Integer quis accumsan lorem. Praesent dapibus gravida lacinia. Nullam eu sagittis ipsum. Phasellus aliquet erat ut aliquam feugiat.
+                                    In bibendum consequat sapien, et pretium orci elementum vitae. Morbi vitae volutpat eros. Donec justo libero, efficitur a sapien vel, posuere imperdiet dui. Fusce dignissim in nulla non convallis. Praesent facilisis ullamcorper est vel imperdiet.
+                                    Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed est massa, lacinia non ultrices vitae, mollis at orci. Donec id ligula quis massa gravida porttitor ut eu orci. Aliquam aliquet sed ex id porttitor. Pellentesque aliquet a libero congue
+                                    vehicula. Nam dapibus hendrerit tincidunt. Vivamus dolor felis, volutpat sit amet venenatis quis, convallis non orci. Donec volutpat ut neque a rhoncus. Etiam blandit quam at euismod posuere. Vestibulum vitae sem vitae ipsum pellentesque sagittis.
+                                    Nunc ut hendrerit ex. Quisque in congue orci, vitae sagittis nulla. Donec aliquet mollis ipsum id porta. Donec malesuada bibendum erat. Curabitur sed neque eu velit suscipit volutpat. Sed pharetra hendrerit mi, ac pellentesque lorem aliquam sit amet.
+                                    Donec condimentum purus convallis magna lobortis, sed porttitor odio pulvinar. Proin maximus purus porttitor eros scelerisque, a tincidunt lorem cursus. Pellentesque leo elit, volutpat vitae nibh sed, egestas euismod neque. Ut pulvinar leo nec mi
+                                    placerat eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec auctor ex nec sagittis congue. Integer id tempus nisl, a suscipit orci. Aenean ut urna id justo dignissim auctor. Maecenas at cursus
+                                    est. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer venenatis, magna in semper tincidunt, ipsum arcu vestibulum sapien, eget tempor leo est ac massa. Suspendisse convallis leo quis nulla pulvinar, vitae feugiat leo tempor. In
+                                    aliquet eros id vehicula aliquet. Maecenas tincidunt sagittis mi vel congue.
+                                </p>
+                                </span>
 
-                        </article>
-                    </section>
-                    <!--<aside>content right</aside>-->
-                </content>
+                        <button type="button" class="help">
+                                                        <img src= "img/help.png" />
+                                                    </button>
 
-                <footer>2019&copy</footer>
+                    </article>
+                </section>
+                <!--<aside>content right</aside>-->
+            </content>
+
+            <footer>2019&copy</footer>
         </main>
     </div>
 </body>
