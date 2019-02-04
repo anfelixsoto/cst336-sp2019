@@ -78,7 +78,7 @@ aboutAside {
 }
 
 img:hover {
-    transform: scale(0.5);
+    transform: scale(1.0);
     transition: transform .2s;
 }
 
