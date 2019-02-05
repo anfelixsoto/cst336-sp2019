@@ -44,11 +44,30 @@ h2 {
 }
 
 h3,
-h4,
-h5 {
+h4 {
     text-align: center;
     border-style: solid;
     border-radius: 5px;
+}
+
+h4 a {
+    padding: 15px;
+    padding-bottom: 4px;
+    font-size: 1.8em;
+    text-decoration: none;
+    color: white;
+}
+
+h4 a:hover {
+    border-bottom: 2px green solid;
+    font-size: 2em;
+    transition: .9s;
+}
+
+h5:hover {
+    border-bottom: 2px green solid;
+    font-size: 2em;
+    transition: .9s;
 }
 
 section {
@@ -83,6 +102,24 @@ img:hover {
 }
 
 
+foot {
+    text-decoration: none;
+    float: left;
+    margin: 0 1.5%;
+    width: 45%;
+    border-radius: 5px;
+    text-align: center;
+    border-style: solid;
+    clear: both;
+}
+
+.clearfix:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
 
 footer {
     text-align: center;
