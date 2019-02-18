@@ -161,9 +161,9 @@
         <div id="answer6"></div>
 
         <br></br>
-        
+
         <div id="finalScore"></div>
-        
+
         <br></br>
 
         <div>
@@ -174,6 +174,7 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
+        /* global $*/
         var score = "0";
         var correctAnswer1 = "4";
         var correctAnswer2 = "1";
@@ -272,13 +273,13 @@
                     $("#answer6").html(answerLabel6 + " is NOT correct").css("color", "red");
                 }
             });
-            
+
             $("button.check").on("click", function(e) {
-                var percent = score/"6";
+                var percent = score / "6";
                 var finalPercent = percent * "100";
                 finalPercent.toFixed(2);
-                if (score <= 4){
-                    $("#finalScore").html( score + "/6. Sorry, you didn't pass the quiz. You got a " + finalPercent + "%").css("color","red");
+                if (score <= 4) {
+                    $("#finalScore").html(score + "/6. Sorry, you didn't pass the quiz. You got a " + finalPercent + "%").css("color", "red");
                 }
                 else {
                     $("#finalScore").html(score + "/6. Congrats! You passed the quiz! You got a " + finalPercent + "%").css("color", "green");
