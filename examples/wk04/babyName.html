@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Baby Name Guesser</title>
+</head>
+
+<body>
+
+    <!--We use a div instead of a form element...we are not submitting!-->
+    <div>
+        <div class="input-group">
+            <label for="feedback">Can you guess our baby's name?</label>
+            <div>
+                <input type="radio" id="name1" name="nameChoices" value="1">
+                <label for="name1">Felix</label>
+            </div>
+            <div>
+                <input type="radio" id="name2" name="nameChoices" value="2">
+                <label for="name2">Anthony</label>
+            </div>
+            <div>
+                <input type="radio" id="name3" name="nameChoices" value="3">
+                <label for="name3">Rene</label>
+            </div>
+            <div>
+                <input type="radio" id="name4" name="nameChoices" value="4">
+                <label for="name4">Mitch</label>
+            </div>
+            <div>
+                <input type="radio" id="name5" name="nameChoices" value="4">
+                <label for="name5">Jeff</label>
+            </div>
+            <div>
+                <button class="check">Check Answer</button>
+            </div>
+        </div>
+    </div>
+
+    <!--This is where we tell the user if they are right or not-->
+    <div id="answer"></div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        var correctName = "2";
+        $(function() {
+            $("button.check").on("click", function(e) {
+                var guessedRadio = $('input[name=\'nameChoices\']:checked');
+                var guessedName = guessedRadio.val();
+                var guessedId = guessedRadio.attr("id");
+                console.log("guessedId", guessedId);
+                var guessedLabel = $("label[for='" + guessedId + "']").html();
+
+                console.log("guessed name", guessedName);
+                if (guessedName === correctName) {
+                    $("#answer").html(guessedLabel + " is correct!").css("color", "green");
+                }
+                else {
+                    $("#answer").html(guessedLabel + " is NOT correct!").css("color", "red");
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
+
+
+<!--<script>-->
+<!--    var buttomElement = document.getElementById("submit");-->
+<!--    buttomElement.addEventListener("click", function(e) {-->
+<!--        document.getElementById("mainForm").submit();-->
+<!--    })-->
+<!--</script>-->
+
+<!--</html>-->
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+
+<!--<head>-->
+<!--    <title>Baby Name Guess</title>-->
+<!--</head>-->
+
+<!--<body>-->
+
+<!--    <form id="mainForm" action="confirmation.php" method="post">-->
+<!--        First Name: <input type="text" name="firstName">-->
+<!--        <input type="button" id="submit" value="Submit"/>-->
+<!--    </form>-->
+<!--    <form>-->
+<!--        <br /> <br />-->
+<!--        <h1>Guess the baby name:</h1><br>-->
+<!--        <input type="radio" id="name1" name="nameChoices" value="firstName">-->
+<!--        <label for="name1">Felix</label> <br>-->
+<!--        <input type="radio" id="name2" name="nameChoices" value="firstName">-->
+<!--        <label for="name2">Anthony</label> <br>-->
+<!--        <input type="radio" id="name3" name="nameChoices" value="firstName">-->
+<!--        <label for="name2">Rene</label> <br>-->
+<!--        <input type="radio" id="name4" name="nameChoices" value="firstName">-->
+<!--        <label for="name4">Mitch</label> <br>-->
+<!--        <input type="radio" id="name5" name="nameChoices" value="firstName">-->
+<!--        <label for="name5">Jeff</label> <br>-->
+<!--        <br/><br/>-->
+<!--        <input type="button" id="submit" value="Submit"/> <input type="button" value="Clear"/>-->
+<!--    </form>-->
+<!--</body>-->
+
+<!--<script>-->
+<!--    var buttomElement = document.getElementById("submit");-->
+<!--    buttomElement.addEventListener("click", function(e) {-->
+<!--        document.getElementById("mainForm").submit();-->
+<!--    })-->
+<!--</script>-->
+
+<!--</html>-->

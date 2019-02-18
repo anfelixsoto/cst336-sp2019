@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<!--https://www.washingtontimes.com/quiz/2019/feb/7/can-pass-world-war-ii-history-test/#question-2-->
+
+<head>
+    <title>Lab 3: Quiz</title>
+</head>
+
+<body>
+    <div>
+        <div class="quiz-questions">
+
+            <label for="questions">Please answer the following questions</label> <br></br>
+            <div id="question1">
+                Q1: Britain and France declared war on Germany after its invasion of which country?
+                <div>
+                    <input type="radio" id="Q1choice1" name="Q1Choices" value="1">
+                    <label for="Q1choice1">Hungary</label>
+                </div>
+                <div>
+                    <input type="radio" id="Q1choice2" name="Q1Choices" value="2">
+                    <label for="Q1choice2">France</label>
+                </div>
+                <div>
+                    <input type="radio" id="Q1choice3" name="Q1Choices" value="3">
+                    <label for="Q1choice3">Czechoslovakia</label>
+                </div>
+                <div>
+                    <input type="radio" id="Q1choice4" name="Q1Choices" value="4">
+                    <!--Correct Answer-->
+                    <label for="Q1choice4">Poland</label>
+                </div>
+            </div>
+
+            <div id="answer1"></div>
+
+            <br></br>
+
+            <div id="question2">
+                Q2: What is the codename for the entire Allied invasion of German-occupied Western Europe?
+                <div>
+                    <input type="radio" id="Q2choice1" name="Q2Choices" value="1">
+                    <!--Correct Answer-->
+                    <label for="Q2choice1">Overlord</label>
+                </div>
+                <div>
+                    <input type="radio" id="Q2choice2" name="Q2Choices" value="2">
+                    <label for="Q2choice2">Breakout</label>
+                </div>
+                <div>
+                    <input type="radio" id="Q2choice3" name="Q2Choices" value="3">
+                    <label for="Q2choice3">Fortitude</label>
+                </div>
+                <div>
+                    <input type="radio" id="Q2choice4" name="Q2Choices" value="4">
+                    <label for="Q2choice4">Barbarossa</label>
+                </div>
+            </div>
+
+            <div id="answer2"></div>
+
+            <br></br>
+
+            <div id="question3">
+                Q3: Which famous general commanded the Allied invasion of Normandy?
+                <div>
+                    <input type="radio" id="Q3choice1" name="Q3Choices" value="1">
+                    <label for="Q3choice1">George S. Patton</label>
+                </div>
+                <div>
+                    <input type="radio" id="Q3choice2" name="Q3Choices" value="2">
+                    <!--correct answer-->
+                    <label for="Q3choice2">Dwight D. Eisenhower</label>
+                </div>
+                <div>
+                    <input type="radio" id="Q3choice3" name="Q3Choices" value="3">
+                    <label for="Q3choice3">George C. Marshall</label>
+                </div>
+                <div>
+                    <input type="radio" id="Q3choice4" name="Q3Choices" value="4">
+                    <label for="Q3choice4">Omar Bradley</label>
+                </div>
+            </div>
+        </div>
+
+        <div id="answer3"></div>
+
+        <br></br>
+
+        <div id="question4">
+            Q4: Which country was one of the Allied powers?
+            <div>
+                <input type="radio" id="Q4choice1" name="Q4Choices" value="1">
+                <!--correct answer-->
+                <label for="Q4choice1">Brazil</label>
+            </div>
+            <div>
+                <input type="radio" id="Q4choice2" name="Q4Choices" value="2">
+                <label for="Q4choice2">Portugal</label>
+            </div>
+            <div>
+                <input type="radio" id="Q4choice3" name="Q4Choices" value="3">
+                <label for="Q4choice3">Italy</label>
+            </div>
+            <div>
+                <input type="radio" id="Q4choice4" name="Q4Choices" value="4">
+                <label for="Q4choice4">Spain</label>
+            </div>
+        </div>
+
+        <div id="answer4"></div>
+
+        <br></br>
+
+        <div id="question5">
+            Q5: Which of the following countries was NOT an Axis power?
+            <div>
+                <input type="radio" id="Q5choice1" name="Q5Choices" value="1">
+                <!--correct answer-->
+                <label for="Q5choice1">Soviet Union</label>
+            </div>
+            <div>
+                <input type="radio" id="Q5choice2" name="Q5Choices" value="2">
+                <label for="Q5choice2">Germany</label>
+            </div>
+            <div>
+                <input type="radio" id="Q5choice3" name="Q5Choices" value="3">
+                <label for="Q5choice3">Italy</label>
+            </div>
+            <div>
+                <input type="radio" id="Q5choice4" name="Q5Choices" value="4">
+                <label for="Q5choice4">Japan</label>
+            </div>
+        </div>
+
+        <div id="answer5"></div>
+
+        <br></br>
+
+        <div id="question6">
+            Q6: Which of the following countries remained neutral during the war?
+            <div>
+                <input type="radio" id="Q6choice1" name="Q6Choices" value="1">
+                <!--correct answer-->
+                <label for="Q6choice1">Spain</label>
+            </div>
+            <div>
+                <input type="radio" id="Q6choice2" name="Q6Choices" value="2">
+                <label for="Q6choice2">Belgium</label>
+            </div>
+            <div>
+                <input type="radio" id="Q6choice3" name="Q6Choices" value="3">
+                <label for="Q6choice3">France</label>
+            </div>
+            <div>
+                <input type="radio" id="Q6choice4" name="Q6Choices" value="4">
+                <label for="Q6choice4">Denmark</label>
+            </div>
+        </div>
+
+        <div id="answer6"></div>
+
+        <br></br>
+        
+        <div id="finalScore"></div>
+        
+        <br></br>
+
+        <div>
+            <button class="check">Check Answer</button>
+        </div>
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        var score = "0";
+        var correctAnswer1 = "4";
+        var correctAnswer2 = "1";
+        var correctAnswer3 = "2";
+        var correctAnswer4 = "1";
+        var correctAnswer5 = "1";
+        var correctAnswer6 = "1";
+
+        $(function() {
+            $("button.check").on("click", function(e) {
+                var guessedRadio1 = $('input[name=\'Q1Choices\']:checked');
+                var guessedAnswer1 = guessedRadio1.val();
+                var answerId1 = guessedRadio1.attr("id");
+                var answerLabel1 = $("label[for='" + answerId1 + "']").html();
+
+                if (guessedAnswer1 == correctAnswer1) {
+                    $("#answer1").html(answerLabel1 + " is correct!").css("color", "green");
+                    score++;
+                }
+                else {
+                    $("#answer1").html(answerLabel1 + " is NOT correct").css("color", "red");
+                }
+            });
+
+            $("button.check").on("click", function(e) {
+                var guessedRadio2 = $('input[name=\'Q2Choices\']:checked');
+                var guessedAnswer2 = guessedRadio2.val();
+                var answerId2 = guessedRadio2.attr("id");
+                var answerLabel2 = $("label[for='" + answerId2 + "']").html();
+
+                if (guessedAnswer2 == correctAnswer2) {
+                    $("#answer2").html(answerLabel2 + " is correct!").css("color", "green");
+                    score++;
+                }
+                else {
+                    $("#answer2").html(answerLabel2 + " is NOT correct").css("color", "red");
+                }
+            });
+
+            $("button.check").on("click", function(e) {
+                var guessedRadio3 = $('input[name=\'Q3Choices\']:checked');
+                var guessedAnswer3 = guessedRadio3.val();
+                var answerId3 = guessedRadio3.attr("id");
+                var answerLabel3 = $("label[for='" + answerId3 + "']").html();
+
+                if (guessedAnswer3 == correctAnswer3) {
+                    $("#answer3").html(answerLabel3 + " is correct!").css("color", "green");
+                    score++;
+                }
+                else {
+                    $("#answer3").html(answerLabel3 + " is NOT correct").css("color", "red");
+                }
+            });
+
+            $("button.check").on("click", function(e) {
+                var guessedRadio4 = $('input[name=\'Q4Choices\']:checked');
+                var guessedAnswer4 = guessedRadio4.val();
+                var answerId4 = guessedRadio4.attr("id");
+                var answerLabel4 = $("label[for='" + answerId4 + "']").html();
+
+                if (guessedAnswer4 == correctAnswer4) {
+                    $("#answer4").html(answerLabel4 + " is correct!").css("color", "green");
+                    score++;
+                }
+                else {
+                    $("#answer4").html(answerLabel4 + " is NOT correct").css("color", "red");
+                }
+            });
+
+            $("button.check").on("click", function(e) {
+                var guessedRadio5 = $('input[name=\'Q5Choices\']:checked');
+                var guessedAnswer5 = guessedRadio5.val();
+                var answerId5 = guessedRadio5.attr("id");
+                var answerLabel5 = $("label[for='" + answerId5 + "']").html();
+
+                if (guessedAnswer5 == correctAnswer5) {
+                    $("#answer5").html(answerLabel5 + " is correct!").css("color", "green");
+                    score++;
+                }
+                else {
+                    $("#answer5").html(answerLabel5 + " is NOT correct").css("color", "red");
+                }
+            });
+
+            $("button.check").on("click", function(e) {
+                var guessedRadio6 = $('input[name=\'Q6Choices\']:checked');
+                var guessedAnswer6 = guessedRadio6.val();
+                var answerId6 = guessedRadio6.attr("id");
+                var answerLabel6 = $("label[for='" + answerId6 + "']").html();
+
+                if (guessedAnswer6 == correctAnswer6) {
+                    $("#answer6").html(answerLabel6 + " is correct!").css("color", "green");
+                    score++;
+                }
+                else {
+                    $("#answer6").html(answerLabel6 + " is NOT correct").css("color", "red");
+                }
+            });
+            
+            $("button.check").on("click", function(e) {
+                var percent = score/"6";
+                var finalPercent = percent * "100";
+                finalPercent.toFixed(2);
+                if (score <= 4){
+                    $("#finalScore").html( score + "/6. Sorry, you didn't pass the quiz. You got a " + finalPercent + "%").css("color","red");
+                }
+                else {
+                    $("#finalScore").html(score + "/6. Congrats! You passed the quiz! You got a " + finalPercent + "%").css("color", "green");
+                }
+            })
+        });
+    </script>
+
+</body>
+
+</html>
