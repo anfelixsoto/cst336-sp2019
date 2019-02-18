@@ -1,0 +1,40 @@
+body {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+header {
+    background-color: lightgrey;
+    margin: -30px;
+    height: 150px;
+}
+
+h1 {
+    
+    padding-top: 30px;
+}
+
+#wrapper {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+div {
+    padding: 10px 10px;
+    font-size: 18px;
+    font-style: bold;
+}
+
+#play {
+    margin-top: 30px;
+    background: green;
+    color: white;
+    border: none;
+    padding: 20px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Slot Machine</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1> Slot Machine </h1>
+    </header>
+    
+    <br>
+
+    <button id="play"> Play </button>
+    <br>
+    <div id="wrapper">
+        <div id="image1" class="image"></div>
+        <div id="image2" class="image"></div>
+        <div id="image3" class="image"></div>
+    </div>
+    <div id="jackPot"></div>
+    <div id="wins"></div>
+    <div id="totalWin"></div>
+
+
+    <script>
+        /* global $*/
+        var audio = new Audio("audio/jackpot.m4a");
+        var totalwinnings = 0;
+
+
+        $("button").on("click", function(e) {
+            $("#jackPot").html("");
+            let imageArray = ["cherry", "grapes", "seven"];
+            let winningNums = [];
+            let winnings = 0;
+            let randomIndex = Math.floor(Math.random() * 3);
+            let randomImage = imageArray[randomIndex];
+            winningNums[0] = randomIndex;
+            $("#image1").html("<img src='img/" + randomImage + ".png' />");
+
+            randomIndex = Math.floor(Math.random() * 3);
+            randomImage = imageArray[randomIndex];
+            winningNums[1] = randomIndex;
+            $("#image2").html("<img src='img/" + randomImage + ".png' />");
+
+            randomIndex = Math.floor(Math.random() * 3);
+            randomImage = imageArray[randomIndex];
+            winningNums[2] = randomIndex;
+            $("#image3").html("<img src='img/" + randomImage + ".png' />");
+
+            if (winningNums[0] == winningNums[1] && winningNums[0] == winningNums[2]) {
+
+                if (winningNums[0] == 0) {
+                    winnings = 100;
+                }
+                else if (winningNums[0] == 1) {
+                    winnings = 300;
+                }
+                else {
+                    $("#jackPot").html("J A C K P O T!!");
+                    winnings = 500;
+                    audio.play();
+                }
+
+                $("#wins").html("You won $" + winnings);
+
+            }
+            else {
+                $("#wins").html("Try Again.");
+            }
+
+            totalwinnings += winnings;
+            $("#totalWin").html("Total winnings: $" + totalwinnings);
+        });
+    </script>
+
+</body>
+
+
+</html>
