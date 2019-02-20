@@ -3,19 +3,29 @@
 
 <head>
     <title>Project 2: JavaScript and jQuery</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 </head>
 
 <body>
+    <header>
+        <h1>Customer Complain Form</h1>
+        Welcome to our customer complain site, here you are allowed to enter your information. Giving us feedback and allow us to help you with your current situation. Thank you taking your time to fill out our form! <br>
+    </header>
     <form>
         <div id="name">
             First name:
-            <input type="text" name="firstname" required> Last name:
-            <input type="text" name="lastname" required>
+            <input type="text" id="firstname" required> Last name:
+            <input type="text" id="lastname" required>
+            <div id="day">
+                current date:
+                <input type="date" id="cday" required/>
+            </div>
         </div>
 
         <br>
 
-        <div id="birthDay" >
+        <div id="birthDay">
             Birthday:
             <input type="date" name="bday" required>
         </div>
@@ -38,12 +48,13 @@
 
         <div id="cellPhone">
             Enter a valid cellphone number:<br>
-            111-222-3333 format phone number like this <br>
             <select id="countryCode">
                 <option value="US">US +1</option>
                 <option value="MX">MX +52</option>
             </select>
-            <input type="tel" id="areaCode" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required/>
+            <input type="tel" id="areaCode" pattern="[0-9]{3}" required/> -
+            <input type="tel" id="prefix" pattern="[0-9]{3}" required/> -
+            <input type="tel" id="lineNum" patter="[0-9]{4}" required/>
         </div>
 
         <br>
@@ -59,70 +70,74 @@
             Select the best day and time to reach you: <br>
             <div id="days" required>
                 <input type="checkbox" id="Mon">Monday</option>
-                <input type="time" id="appt" name="appt" min: "8:00" max="24:00"/> to
+                <input type="time" id="appt" name="appt" min: "8:00" max="24:00" /> to
                 <input type="time" id="appt" name="appt" min: "8:00" max="24:00" /> <br></br>
 
                 <br>
 
                 <input type="checkbox" id="Tue">Tuesday</option>
-                <input type="time" id="appt" name="appt" min: "8:00" max="24:00"/> to
+                <input type="time" id="appt" name="appt" min: "8:00" max="24:00" /> to
                 <input type="time" id="appt" name="appt" min: "8:00" max="24:00" /> <br></br>
 
                 <br>
 
                 <input type="checkbox" id="Wed">Wednesday</option>
-                <input type="time" id="appt" name="appt" min: "8:00" max="24:00"/> to
+                <input type="time" id="appt" name="appt" min: "8:00" max="24:00" /> to
                 <input type="time" id="appt" name="appt" min: "8:00" max="24:00" /> <br></br>
 
                 <br>
 
                 <input type="checkbox" id="Thur">Thursday</option>
-                <input type="time" id="appt" name="appt" min: "8:00" max="24:00"/> to
+                <input type="time" id="appt" name="appt" min: "8:00" max="24:00" /> to
                 <input type="time" id="appt" name="appt" min: "8:00" max="24:00" /> <br></br>
 
                 <br>
 
                 <input type="checkbox" id="Fri">Friday</option>
-                <input type="time" id="appt" name="appt" min: "8:00" max="24:00"/> to
+                <input type="time" id="appt" name="appt" min: "8:00" max="24:00" /> to
                 <input type="time" id="appt" name="appt" min: "8:00" max="24:00" /> <br></br>
 
                 <br>
 
                 <input type="checkbox" id="Sat">Saturday</option>
-                <input type="time" id="appt" name="appt" min: "8:00" max="24:00"/> to
+                <input type="time" id="appt" name="appt" min: "8:00" max="24:00" /> to
                 <input type="time" id="appt" name="appt" min: "8:00" max="24:00" /> <br></br>
 
                 <br>
 
                 <input type="checkbox" id="Sun">Sunday</option>
-                <input type="time" id="appt" name="appt" min: "8:00" max="12:00"/> to
+                <input type="time" id="appt" name="appt" min: "8:00" max="12:00" /> to
                 <input type="time" id="appt" name="appt" min: "8:00" max="12:00" /> <br></br>
 
                 <br>
 
             </div>
 
-            <!--Might use this later!-->
-            <!--<div id="time">-->
-            <!--    <select id="timeOfDay">-->
-            <!--    <option value="morning">Morning (8am to 11 am)</option>-->
-            <!--    <option value="checkbox" id="noon">Noon (12pm to 4pm)</option>-->
-            <!--    <option value="checkbox" id="evening">Evening (5pm to 9pm)</option>-->
-            <!--    </select>-->
-            <!--</div>-->
         </div>
 
         <br>
 
-        <div id="feedback">
+        <div id="store">
+            Which store did you visit :
+            <select id="storeLocation">
+                <option value="LA">Los Angeles</option>
+                <option value="SF">San Francisco</option>
+                <option value="SJ">San Jose</option>
+                <option value="MB">Monterey Bay</option>
+            </select>
+        </div>
+
+        <br>
+
+        <div id="feedBack">
             Feedback: <br>
             <textarea id="feedback" cols="30" rows="3"></textarea>
         </div>
 
-        <button class="check">Submit</button>
-        
+        <button id="check">Submit</button>
+
     </form>
-    
+
     <div id="submittedForm"></div>
 
 </body>
@@ -136,5 +151,11 @@
         });
     });
 </script>
+
+<footer>
+    <hr> CST 336. 2019&copy; Felix <br />
+    <strong>Disclaimer:</strong> The information in this webpage is fictitous. <br /> It is used for academic purpose only.
+    <br />
+</footer>
 
 </html>
