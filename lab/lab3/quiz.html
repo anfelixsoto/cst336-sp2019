@@ -4,171 +4,176 @@
 
 <head>
     <title>Lab 3: Quiz</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-    <div>
-        <div class="quiz-questions">
+    <header>
+        <h1>World War 2: Quiz</h1>
+        <figure id="ww2">
+            <img src="ww2.jpeg" alt="World World 2: Banner" />
+        </figure>
+    </header>
 
-            <label for="questions">Please answer the following questions</label> <br></br>
-            <div id="question1">
-                Q1: Britain and France declared war on Germany after its invasion of which country?
-                <div>
-                    <input type="radio" id="Q1choice1" name="Q1Choices" value="1">
-                    <label for="Q1choice1">Hungary</label>
-                </div>
-                <div>
-                    <input type="radio" id="Q1choice2" name="Q1Choices" value="2">
-                    <label for="Q1choice2">France</label>
-                </div>
-                <div>
-                    <input type="radio" id="Q1choice3" name="Q1Choices" value="3">
-                    <label for="Q1choice3">Czechoslovakia</label>
-                </div>
-                <div>
-                    <input type="radio" id="Q1choice4" name="Q1Choices" value="4">
-                    <!--Correct Answer-->
-                    <label for="Q1choice4">Poland</label>
-                </div>
+    <div class="quiz-questions">
+        <h2>Please answer the following questions. Once submitting the form, your grade will be posted! Good luck! Remember this quiz is closed book!</h2>
+        <div id="question1">
+            Q1: Britain and France declared war on Germany after its invasion of which country?
+            <div>
+                <input type="radio" id="Q1choice1" name="Q1Choices" value="1">
+                <label for="Q1choice1">Hungary</label>
             </div>
-
-            <div id="answer1"></div>
-
-            <br></br>
-
-            <div id="question2">
-                Q2: What is the codename for the entire Allied invasion of German-occupied Western Europe?
-                <div>
-                    <input type="radio" id="Q2choice1" name="Q2Choices" value="1">
-                    <!--Correct Answer-->
-                    <label for="Q2choice1">Overlord</label>
-                </div>
-                <div>
-                    <input type="radio" id="Q2choice2" name="Q2Choices" value="2">
-                    <label for="Q2choice2">Breakout</label>
-                </div>
-                <div>
-                    <input type="radio" id="Q2choice3" name="Q2Choices" value="3">
-                    <label for="Q2choice3">Fortitude</label>
-                </div>
-                <div>
-                    <input type="radio" id="Q2choice4" name="Q2Choices" value="4">
-                    <label for="Q2choice4">Barbarossa</label>
-                </div>
+            <div>
+                <input type="radio" id="Q1choice2" name="Q1Choices" value="2">
+                <label for="Q1choice2">France</label>
             </div>
-
-            <div id="answer2"></div>
-
-            <br></br>
-
-            <div id="question3">
-                Q3: Which famous general commanded the Allied invasion of Normandy?
-                <div>
-                    <input type="radio" id="Q3choice1" name="Q3Choices" value="1">
-                    <label for="Q3choice1">George S. Patton</label>
-                </div>
-                <div>
-                    <input type="radio" id="Q3choice2" name="Q3Choices" value="2">
-                    <!--correct answer-->
-                    <label for="Q3choice2">Dwight D. Eisenhower</label>
-                </div>
-                <div>
-                    <input type="radio" id="Q3choice3" name="Q3Choices" value="3">
-                    <label for="Q3choice3">George C. Marshall</label>
-                </div>
-                <div>
-                    <input type="radio" id="Q3choice4" name="Q3Choices" value="4">
-                    <label for="Q3choice4">Omar Bradley</label>
-                </div>
+            <div>
+                <input type="radio" id="Q1choice3" name="Q1Choices" value="3">
+                <label for="Q1choice3">Czechoslovakia</label>
+            </div>
+            <div>
+                <input type="radio" id="Q1choice4" name="Q1Choices" value="4">
+                <!--Correct Answer-->
+                <label for="Q1choice4">Poland</label>
             </div>
         </div>
 
-        <div id="answer3"></div>
+        <div id="answer1"></div>
 
         <br></br>
 
-        <div id="question4">
-            Q4: Which country was one of the Allied powers?
+        <div id="question2">
+            Q2: What is the codename for the entire Allied invasion of German-occupied Western Europe?
             <div>
-                <input type="radio" id="Q4choice1" name="Q4Choices" value="1">
+                <input type="radio" id="Q2choice1" name="Q2Choices" value="1">
+                <!--Correct Answer-->
+                <label for="Q2choice1">Overlord</label>
+            </div>
+            <div>
+                <input type="radio" id="Q2choice2" name="Q2Choices" value="2">
+                <label for="Q2choice2">Breakout</label>
+            </div>
+            <div>
+                <input type="radio" id="Q2choice3" name="Q2Choices" value="3">
+                <label for="Q2choice3">Fortitude</label>
+            </div>
+            <div>
+                <input type="radio" id="Q2choice4" name="Q2Choices" value="4">
+                <label for="Q2choice4">Barbarossa</label>
+            </div>
+        </div>
+
+        <div id="answer2"></div>
+
+        <br></br>
+
+        <div id="question3">
+            Q3: Which famous general commanded the Allied invasion of Normandy?
+            <div>
+                <input type="radio" id="Q3choice1" name="Q3Choices" value="1">
+                <label for="Q3choice1">George S. Patton</label>
+            </div>
+            <div>
+                <input type="radio" id="Q3choice2" name="Q3Choices" value="2">
                 <!--correct answer-->
-                <label for="Q4choice1">Brazil</label>
+                <label for="Q3choice2">Dwight D. Eisenhower</label>
             </div>
             <div>
-                <input type="radio" id="Q4choice2" name="Q4Choices" value="2">
-                <label for="Q4choice2">Portugal</label>
+                <input type="radio" id="Q3choice3" name="Q3Choices" value="3">
+                <label for="Q3choice3">George C. Marshall</label>
             </div>
             <div>
-                <input type="radio" id="Q4choice3" name="Q4Choices" value="3">
-                <label for="Q4choice3">Italy</label>
-            </div>
-            <div>
-                <input type="radio" id="Q4choice4" name="Q4Choices" value="4">
-                <label for="Q4choice4">Spain</label>
+                <input type="radio" id="Q3choice4" name="Q3Choices" value="4">
+                <label for="Q3choice4">Omar Bradley</label>
             </div>
         </div>
+    </div>
 
-        <div id="answer4"></div>
+    <div id="answer3"></div>
 
-        <br></br>
+    <br></br>
 
-        <div id="question5">
-            Q5: Which of the following countries was NOT an Axis power?
-            <div>
-                <input type="radio" id="Q5choice1" name="Q5Choices" value="1">
-                <!--correct answer-->
-                <label for="Q5choice1">Soviet Union</label>
-            </div>
-            <div>
-                <input type="radio" id="Q5choice2" name="Q5Choices" value="2">
-                <label for="Q5choice2">Germany</label>
-            </div>
-            <div>
-                <input type="radio" id="Q5choice3" name="Q5Choices" value="3">
-                <label for="Q5choice3">Italy</label>
-            </div>
-            <div>
-                <input type="radio" id="Q5choice4" name="Q5Choices" value="4">
-                <label for="Q5choice4">Japan</label>
-            </div>
-        </div>
-
-        <div id="answer5"></div>
-
-        <br></br>
-
-        <div id="question6">
-            Q6: Which of the following countries remained neutral during the war?
-            <div>
-                <input type="radio" id="Q6choice1" name="Q6Choices" value="1">
-                <!--correct answer-->
-                <label for="Q6choice1">Spain</label>
-            </div>
-            <div>
-                <input type="radio" id="Q6choice2" name="Q6Choices" value="2">
-                <label for="Q6choice2">Belgium</label>
-            </div>
-            <div>
-                <input type="radio" id="Q6choice3" name="Q6Choices" value="3">
-                <label for="Q6choice3">France</label>
-            </div>
-            <div>
-                <input type="radio" id="Q6choice4" name="Q6Choices" value="4">
-                <label for="Q6choice4">Denmark</label>
-            </div>
-        </div>
-
-        <div id="answer6"></div>
-
-        <br></br>
-
-        <div id="finalScore"></div>
-
-        <br></br>
-
+    <div id="question4">
+        Q4: Which country was one of the Allied powers?
         <div>
-            <button class="check">Check Answer</button>
+            <input type="radio" id="Q4choice1" name="Q4Choices" value="1">
+            <!--correct answer-->
+            <label for="Q4choice1">Brazil</label>
         </div>
+        <div>
+            <input type="radio" id="Q4choice2" name="Q4Choices" value="2">
+            <label for="Q4choice2">Portugal</label>
+        </div>
+        <div>
+            <input type="radio" id="Q4choice3" name="Q4Choices" value="3">
+            <label for="Q4choice3">Italy</label>
+        </div>
+        <div>
+            <input type="radio" id="Q4choice4" name="Q4Choices" value="4">
+            <label for="Q4choice4">Spain</label>
+        </div>
+    </div>
+
+    <div id="answer4"></div>
+
+    <br></br>
+
+    <div id="question5">
+        Q5: Which of the following countries was NOT an Axis power?
+        <div>
+            <input type="radio" id="Q5choice1" name="Q5Choices" value="1">
+            <!--correct answer-->
+            <label for="Q5choice1">Soviet Union</label>
+        </div>
+        <div>
+            <input type="radio" id="Q5choice2" name="Q5Choices" value="2">
+            <label for="Q5choice2">Germany</label>
+        </div>
+        <div>
+            <input type="radio" id="Q5choice3" name="Q5Choices" value="3">
+            <label for="Q5choice3">Italy</label>
+        </div>
+        <div>
+            <input type="radio" id="Q5choice4" name="Q5Choices" value="4">
+            <label for="Q5choice4">Japan</label>
+        </div>
+    </div>
+
+    <div id="answer5"></div>
+
+    <br></br>
+
+    <div id="question6">
+        Q6: Which of the following countries remained neutral during the war?
+        <div>
+            <input type="radio" id="Q6choice1" name="Q6Choices" value="1">
+            <!--correct answer-->
+            <label for="Q6choice1">Spain</label>
+        </div>
+        <div>
+            <input type="radio" id="Q6choice2" name="Q6Choices" value="2">
+            <label for="Q6choice2">Belgium</label>
+        </div>
+        <div>
+            <input type="radio" id="Q6choice3" name="Q6Choices" value="3">
+            <label for="Q6choice3">France</label>
+        </div>
+        <div>
+            <input type="radio" id="Q6choice4" name="Q6Choices" value="4">
+            <label for="Q6choice4">Denmark</label>
+        </div>
+    </div>
+
+    <div id="answer6"></div>
+
+    <br></br>
+
+    <div id="finalScore"></div>
+
+    <br></br>
+
+    <div>
+        <button class="check" id="check">Check Answer</button>
     </div>
     </div>
 
@@ -290,4 +295,8 @@
 
 </body>
 
+<footer>
+    <hr> CST 336. 2019&copy; Felix <br />
+    <strong>Disclaimer:</strong> The information in this webpage is fictitous. <br /> It is used for academic purpose only.
+</footer>
 </html>
