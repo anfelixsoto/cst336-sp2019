@@ -41,7 +41,8 @@
     <div id="answer"></div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript">
+    <script>
+        /* global $ */
         var correctName = "2";
         $(function() {
             $("button.check").on("click", function(e) {
@@ -66,52 +67,3 @@
 
 </html>
 
-
-<!--<script>-->
-<!--    var buttomElement = document.getElementById("submit");-->
-<!--    buttomElement.addEventListener("click", function(e) {-->
-<!--        document.getElementById("mainForm").submit();-->
-<!--    })-->
-<!--</script>-->
-
-<!--</html>-->
-
-<!--<!DOCTYPE html>-->
-<!--<html>-->
-
-<!--<head>-->
-<!--    <title>Baby Name Guess</title>-->
-<!--</head>-->
-
-<!--<body>-->
-
-<!--    <form id="mainForm" action="confirmation.php" method="post">-->
-<!--        First Name: <input type="text" name="firstName">-->
-<!--        <input type="button" id="submit" value="Submit"/>-->
-<!--    </form>-->
-<!--    <form>-->
-<!--        <br /> <br />-->
-<!--        <h1>Guess the baby name:</h1><br>-->
-<!--        <input type="radio" id="name1" name="nameChoices" value="firstName">-->
-<!--        <label for="name1">Felix</label> <br>-->
-<!--        <input type="radio" id="name2" name="nameChoices" value="firstName">-->
-<!--        <label for="name2">Anthony</label> <br>-->
-<!--        <input type="radio" id="name3" name="nameChoices" value="firstName">-->
-<!--        <label for="name2">Rene</label> <br>-->
-<!--        <input type="radio" id="name4" name="nameChoices" value="firstName">-->
-<!--        <label for="name4">Mitch</label> <br>-->
-<!--        <input type="radio" id="name5" name="nameChoices" value="firstName">-->
-<!--        <label for="name5">Jeff</label> <br>-->
-<!--        <br/><br/>-->
-<!--        <input type="button" id="submit" value="Submit"/> <input type="button" value="Clear"/>-->
-<!--    </form>-->
-<!--</body>-->
-
-<!--<script>-->
-<!--    var buttomElement = document.getElementById("submit");-->
-<!--    buttomElement.addEventListener("click", function(e) {-->
-<!--        document.getElementById("mainForm").submit();-->
-<!--    })-->
-<!--</script>-->
-
-<!--</html>-->
