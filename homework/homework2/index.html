@@ -47,13 +47,6 @@
 
         <br>
 
-        <div id="zipCode" required>
-            Please enter your zip code:<br>
-            <input type="text" name="areaCode" patter="[0-9]{5}" required/>
-        </div>
-
-        <br>
-
         <div id="emailAddress">
             Please enter an email address:<br>
             <input type="text" name="email" required/>
@@ -65,38 +58,38 @@
             Select the best day and time to reach you: <br>
             <div id="days" required>
                 <input type="checkbox" id="Mon">Monday</option>
-                <input type="time" id="appt" name="appt" min: "8:00" max="12:00"/> to
-                <input type="time" id="appt" name="appt" min: "8:00" max="12:00" /> <br></br>
+                <input type="time" id="appt" name="appt" min: "8:00" max="24:00"/> to
+                <input type="time" id="appt" name="appt" min: "8:00" max="24:00" /> <br></br>
 
                 <br>
 
                 <input type="checkbox" id="Tue">Tuesday</option>
-                <input type="time" id="appt" name="appt" min: "8:00" max="12:00"/> to
-                <input type="time" id="appt" name="appt" min: "8:00" max="12:00" /> <br></br>
+                <input type="time" id="appt" name="appt" min: "8:00" max="24:00"/> to
+                <input type="time" id="appt" name="appt" min: "8:00" max="24:00" /> <br></br>
 
                 <br>
 
                 <input type="checkbox" id="Wed">Wednesday</option>
-                <input type="time" id="appt" name="appt" min: "8:00" max="12:00"/> to
-                <input type="time" id="appt" name="appt" min: "8:00" max="12:00" /> <br></br>
+                <input type="time" id="appt" name="appt" min: "8:00" max="24:00"/> to
+                <input type="time" id="appt" name="appt" min: "8:00" max="24:00" /> <br></br>
 
                 <br>
 
                 <input type="checkbox" id="Thur">Thursday</option>
-                <input type="time" id="appt" name="appt" min: "8:00" max="12:00"/> to
-                <input type="time" id="appt" name="appt" min: "8:00" max="12:00" /> <br></br>
+                <input type="time" id="appt" name="appt" min: "8:00" max="24:00"/> to
+                <input type="time" id="appt" name="appt" min: "8:00" max="24:00" /> <br></br>
 
                 <br>
 
                 <input type="checkbox" id="Fri">Friday</option>
-                <input type="time" id="appt" name="appt" min: "8:00" max="12:00"/> to
-                <input type="time" id="appt" name="appt" min: "8:00" max="12:00" /> <br></br>
+                <input type="time" id="appt" name="appt" min: "8:00" max="24:00"/> to
+                <input type="time" id="appt" name="appt" min: "8:00" max="24:00" /> <br></br>
 
                 <br>
 
                 <input type="checkbox" id="Sat">Saturday</option>
-                <input type="time" id="appt" name="appt" min: "8:00" max="12:00"/> to
-                <input type="time" id="appt" name="appt" min: "8:00" max="12:00" /> <br></br>
+                <input type="time" id="appt" name="appt" min: "8:00" max="24:00"/> to
+                <input type="time" id="appt" name="appt" min: "8:00" max="24:00" /> <br></br>
 
                 <br>
 
@@ -137,7 +130,7 @@
     /* global $*/
     $(function() {
         $("button.check").on("click", function(e) {
-            $("#submittedForm").html("Thank you for your submission! Please allow 3 to 5 business for us to conact you!");
+            $("#submittedForm").html("Thank you for your submission! Please allow 3 to 5 business for us to conact you! ");
         });
     });
 </script>
