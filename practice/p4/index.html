@@ -79,9 +79,9 @@
     <input type="checkbox" id="check" name="check"><span id="checkError">I accept the terms of this purchase.</span></input>
     <br>
 
-    <button id="submit">"CONFIRM PURCHASE"</button><br>
+    <button id="submit">"CONFIRM PURCHASE"</button><br></br>
 
-    <span id="thankYou"></span>
+    <h1 id="thankYou"></h1>
 </body>
 
 <script>
@@ -100,38 +100,38 @@
         var towel = ($("#towel").val() * towelPrice);
         $("#towelTotal").html("$" + towel)
         sub += parseFloat(towel);
-        $("#subtotal").html(sub);
+        $("#subtotal").html("$" + sub);
         grandTotal += sub + (sub * .10);
-        $("#tax").html((sub * .10));
-        $("#total").html(grandTotal);
+        $("#tax").html("$" + (sub * .10));
+        $("#total").html("$" + grandTotal);
     })
     $("#sun").change(function() {
         var sun = ($("#sun").val() * sunPrice);
         $("#sunTotal").html("$" + sun);
         sub += sun;
-        $("#subtotal").html(sub);
+         $("#subtotal").html("$" + sub);
         grandTotal += sub + (sub * .10);
-        $("#tax").html((sub * .10));
-        $("#total").html(grandTotal);
+        $("#tax").html("$" + (sub * .10));
+        $("#total").html("$" + grandTotal);
     })
     $("#flip").change(function() {
         var flip = ($("#flip").val() * flipPrice);
         $("#flipTotal").html("$" + flip)
         sub += flip;
-        $("#subtotal").html(sub);
+        $("#subtotal").html("$" + sub);
         grandTotal += sub + (sub * .10);
-        $("#tax").html((sub * .10));
-        $("#total").html(grandTotal);
+        $("#tax").html("$" + (sub * .10));
+        $("#total").html("$" + grandTotal);
     })
     $("#shipping").change(function() {
         let shippingResponse = $("#shipping").val();
         shipped = $("#shipping").val();
         $("#shippingFeedback").html("$" + shippingResponse);
         sub += parseFloat(shippingResponse);
-        $("#subtotal").html(sub);
+         $("#subtotal").html("$" + sub);
         grandTotal += sub + (sub * .10);
-        $("#tax").html((sub * .10));
-        $("#total").html(grandTotal);
+        $("#tax").html("$" + (sub * .10));
+        $("#total").html("$" + grandTotal);
     })
 
 
