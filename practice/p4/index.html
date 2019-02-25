@@ -85,26 +85,23 @@
 </body>
 
 <script>
-    var tax = 0;
+     /* global $*/
     var shipped = 0;
     var towelPrice = 30;
     var sunPrice = 10;
     var flipPrice = 20;
     var grandTotal = 0;
-    let nextDay = 15;
-    let threeDay = 10;
-    let regular = 5;
     var sub = 0;
 
     $("#towel").change(function() {
         var towel = ($("#towel").val() * towelPrice);
-        $("#towelTotal").html("$" + towel)
+        $("#towelTotal").html("$" + towel);
         sub += parseFloat(towel);
         $("#subtotal").html("$" + sub);
         grandTotal += sub + (sub * .10);
         $("#tax").html("$" + (sub * .10));
         $("#total").html("$" + grandTotal);
-    })
+    });
     $("#sun").change(function() {
         var sun = ($("#sun").val() * sunPrice);
         $("#sunTotal").html("$" + sun);
@@ -113,16 +110,16 @@
         grandTotal += sub + (sub * .10);
         $("#tax").html("$" + (sub * .10));
         $("#total").html("$" + grandTotal);
-    })
+    });
     $("#flip").change(function() {
         var flip = ($("#flip").val() * flipPrice);
-        $("#flipTotal").html("$" + flip)
+        $("#flipTotal").html("$" + flip);
         sub += flip;
         $("#subtotal").html("$" + sub);
         grandTotal += sub + (sub * .10);
         $("#tax").html("$" + (sub * .10));
         $("#total").html("$" + grandTotal);
-    })
+    });
     $("#shipping").change(function() {
         let shippingResponse = $("#shipping").val();
         shipped = $("#shipping").val();
@@ -132,9 +129,7 @@
         grandTotal += sub + (sub * .10);
         $("#tax").html("$" + (sub * .10));
         $("#total").html("$" + grandTotal);
-    })
-
-
+    });
     $("#submit").on("click", function() {
         if ($("input[name=check]:checked").val() != "on") {
             $("#checkError").css("color", "red");
@@ -147,7 +142,7 @@
             $("#error").html("A shipping option must be selected").css("color", "black");
             $("#checkError").css("color", "black");
         }
-    })
+    });
 
     console.log(grandTotal);
 </script>
