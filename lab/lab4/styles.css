@@ -1,0 +1,48 @@
+header {
+    background-color: lightblue;
+    border-color:lightblue;
+    border-radius:50px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+
+#dummybodyid {
+    text-align: center;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+
+#code {
+    width: 45px;
+}
+
+#phoneNum {
+    width: 80px;
+}
+
+#inputState {
+    width: 30px;
+}
+
+#signUp {
+    border-radius:50px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+fieldset{
+    border-radius:10px;
+    background-color:white;
+}
+
+body {
+    background-color: #CCFFCC;
+}

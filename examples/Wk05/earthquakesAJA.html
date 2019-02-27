@@ -46,7 +46,6 @@
                 },
                 success: function(data, status) {
                     $('#earthquakeResult').html(data["metadata"].title + "<br>");
-                    console.log(earthquakeResult);
                     for (var i = 0; i < data['features'].length; i++) {
                         $('#earthquakeResult').append(data['features'][i]['properties']["mag"] + " - " + data['features'][i]['properties'].place + "<br/>");
                     }
