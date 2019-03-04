@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Practice 5: Like/Dislike Video App</title>
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/qIsCRxZqA14" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  <div id="buttons">
+
+    <!--<button id="getComments" width="35">-->
+    <!--  Get Comments-->
+    <!--</button>-->
+
+    <button id="like">
+    <img src="img/like.png" alt="Like button" width="35" />
+  </button>
+
+    <span id="likes"></span>
+    <span id="working"></span>
+
+    <button id="dislike">
+    <img src="img/dislike.png" alt="Like button" width="35" />
+  </button>
+
+    <span id="dislikes"></span>
+  </div>
+
+
+</body>
+
+<script>
+  var likeClick = 0;
+  var dislikeClick = 0;
+
+  /*global $*/
+
+  $("#like").on("click", function(e) {
+    if (likeClick == 0) {
+      ajaxCall("like");
+      likeClick++;
+    }
+    else {
+      ajaxCall("cancel_like");
+      likeClick--;
+    }
+  });
+
+  $("#dislike").on("click", function(dislike) {
+    if (dislikeClick == 0) {
+      ajaxCall("dislike");
+    }
+    else {
+      ajaxCall("cancel_dislike");
+      dislikeClick--;
+    }
+  });
+
+  function ajaxCall(action) {
+    if (action == "like") {
+      $("#like").css("display", "none");
+      $("#like").css("display", "inline");
+    }
+
+    if (action == "dislike") {
+      $("#dislike").css("display", "none");
+      $("#dislike").css("display", "inline");
+    }
+
+    if (action == "cancel_like") {
+       $("#like").css("display", "none");
+      $("#like").css("display", "inline");
+    }
+
+    if (action == "cancel_dislike") {
+
+    }
+  }
+
+  $.ajax({
+    type: "get",
+    url: "https://cst336.herokuapp.com/projects/api/videoLikesAPI.php",
+    dataType: "json",
+    data: { "videoId": "qIsCRxZqA14" },
+
+    success: function(data, status) {
+      $("#likes").html(data.likes);
+      $("#dislikes").html(data.dislikes);
+    }
+  });
+</script>
+
+</html>

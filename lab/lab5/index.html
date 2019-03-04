@@ -31,7 +31,6 @@
       <div><label>City: <span id="city"></span></label></div><br>
       <div>
         <label>Latitude: <span id="latitude"></span></label>
-        
         <label> Longitude: <span id="longitude"></span></label>
       </div><br>
       <div>
@@ -55,7 +54,6 @@
     $("#code").change(getZipInfo);
 
     function getZipInfo() {
-      //Need to add the error when inputting an incorrect zip code
       $.ajax({
         type: "get",
         url: "http://itcdland.csumb.edu/~milara/ajax/cityInfoByZip.php",
