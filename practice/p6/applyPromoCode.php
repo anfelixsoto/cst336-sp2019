@@ -22,10 +22,10 @@ $discount["discount"] = .3;
 array_push($discountsArray,$discount);
 
 $discount["discountCode"] = "beach";
-$discount["discount"] = .2;
+$discount["discount"] = .20;
 
 $discount["discountCode"] = "sunny";
-$discount["discount"] = .2;
+$discount["discount"] = .20;
 
 array_push($discountsArray,$discount);
 
