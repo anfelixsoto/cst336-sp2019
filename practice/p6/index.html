@@ -1,92 +1,95 @@
 <html>
 
 <head>
-    <title>Shopping Cart</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Discount Shopping!</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
 </head>
 
 <body>
-    <h1> Spring Break Shopping </h1>
+    <h1> Discount Shopping! </h1>
 
-    <table>
-        <tr>
-            <th>Product</th>
-            <th>Unit <br> Price</th>
-            <th> Quantity </th>
-            <th>Total</th>
-        </tr>
-        <tr>
-            <td>Microfiber Beach Towel</td>
-            <td>$30</td>
-            <td><input type="text" id="towel" size="5"></td>
-            <td id="towelTotal"></td>
-        </tr>
-
-        <tr>
-            <td>Sunscreen 100SPF, 120ml</td>
-            <td>$10</td>
-            <td><input type="text" id="sun" size="5" /></td>
-            <td id="sunTotal"></td>
-        </tr>
-
-        <tr>
-            <td>Ipanema Flip-flop Sandals </td>
-            <td>$20</td>
-            <td><input type="text" id="flip" size="5"></td>
-            <td id="flipTotal"></td>
-        </tr>
-
-        <tr>
-            <td>Shipping</td>
-            <td></td>
-            <td></td>
-            <td id="shippingFeedback"></td>
-        </tr>
-
-        <tr>
-            <td>Subtotal</td>
-            <td></td>
-            <td></td>
-            <td id="subtotal"></td>
-        </tr>
-
-        <tr>
-            <td>Tax (10%)</td>
-            <td></td>
-            <td></td>
-            <td id="tax"></td>
-        </tr>
-
-        <tr>
-            <td>Total</td>
-            <td></td>
-            <td></td>
-            <td id="total"></td>
-        </tr>
-
-    </table>
-
-    <h3>Shipping & Handling</h3>
-    <select id="shipping">
-        <option value="0">Select one</option>
-        <option value="15">Next-Day Delivery: $15.00</option>
-        <option value="10">Three-Day Delivery: $10.00</option>
-        <option value="5">Regular (5-8 days) $5.00</option>
-    </select>
-    <span id="error"></span>
-    <br><br>
-
-    <input type="checkbox" id="check" name="check"><span id="checkError">I accept the terms of this purchase.</span></input>
-    <br>
-
-    <button id="submit">"CONFIRM PURCHASE"</button><br></br>
-
-    <h1 id="thankYou"></h1>
+    <table style="width:100%">
+  <tr>
+    <th>Product</th>
+    <th>Unit Price</th> 
+    <th>Quantity</th>
+    <th>Total</th>
+  </tr>
+  <tr>
+    <td id="productName"></td>
+    <td id="productPrice"></td> 
+    <td id="quantity"></td>
+    <td id="total"></td>
+  </tr>
+  <tr>
+    <td>Discount</td>
+    <td id="empty"></td>
+    <td id="discountAmount"></td>
+    <td id="newAmount"></td>
+  </tr>
+  
+  <tr>
+    <td>Subtotal</td>
+    <td id="empty"></td>
+    <td id="empty"></td> 
+    <td id="subtotal"></td>
+  </tr>
+  
+  <tr>
+    <td>Tax(10%)</td>
+    <td id="empty"></td>
+    <td id="empty"></td>
+    <td id="tax"></td>
+  </tr>
+  
+  <tr>
+    <td>Total</td>
+    <td id="empty"></td>
+    <td id="empty"></td>
+    <td id="grandTotal"></td>
+  </tr>
+  
+</table>
 </body>
 
 <script>
-     /* global $*/
-  
+    /* global $*/
+    $.ajax({
+        type: "get",
+        url: "https://antoniofelix-cst336s2019.herokuapp.com/practice/p6/getRandomProduct.php",
+        dataType: "json",
+        
+        success: function(data){
+            $("#productName").html(data.product);
+            $("#productPrice").html(data.price);
+            $("#Quantity").hmtl(data.qty);
+        }
+    })
+
+
+    $("#userInput").change(getPromoCode);
+
+    function getPromoCode() {
+        $.ajax({
+            type: "get",
+            url: "https://antoniofelix-cst336s2019.herokuapp.com/practice/p6/applyPromoCode.php",
+            dataType: "json",
+            data: {
+                "format": "geojson",
+                "discountCode": $("#userInput").val()
+            },
+            success: function(data) {
+                console.log(data.discount)
+                $("#discountAmount").htm(data.discount);
+            }
+        });
+    }
 </script>
 
 </html>
