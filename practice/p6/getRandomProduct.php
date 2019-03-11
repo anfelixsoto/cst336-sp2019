@@ -1,3 +1,6 @@
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Authorization");
+
 <?php
 $products = array();
 $products ["product"] = "Mircofiber Beach Towel";
