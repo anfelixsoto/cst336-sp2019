@@ -70,6 +70,10 @@ table, th, td {
             $("#productName").html(data.product);
             $("#productPrice").html(data.price);
             $("#quantity").html(data.qty);
+            var prices = data.price;
+            var qyts = data.qty;
+            var productTotal = prices * qyts;
+            $("#total").htm(productTotal);
         }
     })
 
