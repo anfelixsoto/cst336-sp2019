@@ -21,14 +21,13 @@
     <!--</button>-->
 
     <button id="like">
-    <img src="img/like.png" alt="Like button" width="35" />
-  </button>
+      <img src="img/cancel_like.png" alt="Like button" width="35" />
+    </button>
 
     <span id="likes"></span>
-    <span id="working"></span>
 
     <button id="dislike">
-    <img src="img/dislike.png" alt="Like button" width="35" />
+    <img src="img/cancel_dislike.png" alt="Like button" width="35" />
   </button>
 
     <span id="dislikes"></span>
@@ -66,18 +65,15 @@
 
   function ajaxCall(action) {
     if (action == "like") {
-      $("#like").css("display", "none");
-      $("#like").css("display", "inline");
+      $("#like").css("display","none");
     }
 
     if (action == "dislike") {
-      $("#dislike").css("display", "none");
-      $("#dislike").css("display", "inline");
+      $("#like").css("display","none");
     }
 
     if (action == "cancel_like") {
-       $("#like").css("display", "none");
-      $("#like").css("display", "inline");
+      
     }
 
     if (action == "cancel_dislike") {
