@@ -68,12 +68,12 @@ table, th, td {
         
         success: function(data){
             $("#productName").html(data.product);
-            $("#productPrice").html(data.price);
+            $("#productPrice").html("$" + data.price);
             $("#quantity").html(data.qty);
             var prices = data.price;
             var qyts = data.qty;
             var productTotal = prices * qyts;
-            $("#total").html(productTotal);
+            $("#total").html("$" + productTotal);
         }
     })
 
