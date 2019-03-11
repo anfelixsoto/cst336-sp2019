@@ -19,14 +19,14 @@
     <fieldset>
       <legend>Sign Up</legend>
       <div>
-        <label>First Name: </label><input type="text" required>
-        <label> Last Name: </label><input type="text" required>
+        <label>First Name: </label><input type="text">
+        <label> Last Name: </label><input type="text">
       </div><br>
       <div>
-        <label>Email: </label><input type="text" required>
+        <label>Email: </label><input type="text">
         <label>Phone Number: </label><input type="text" id="phoneNum">
       </div><br>
-      <div><label>Zip Code: </label><input type="text" id="code" required><br>
+      <div><label>Zip Code: </label><input type="text" id="code"><br>
         <span id="zipError"></span></div><br>
       <div><label>City: <span id="city"></span></label></div><br>
       <div>
@@ -34,15 +34,16 @@
         <label> Longitude: <span id="longitude"></span></label>
       </div><br>
       <div>
-        <label>State: </label><input type="text" id="inputState" required>
+        <label>State: </label><input type="text" id="inputState">
         <label>Select a County: </label><select id="county"></select>
       </div><br>
-      <div><label>Desired Username: </label><input type="text" id="userName" required><br>
+      <div><label>Desired Username: </label><input type="text" id="userName"><br>
         <span id="userError"></span></div><br>
       <div>
-        <label>Password: </label><input type="password" id="password" required><br></br>
-        <label>Type Password Again: </label><input type="password" id="repassword" required>
+        <label>Password: </label><input type="password" id="password"><br></br>
+        <label>Type Password Again: </label><input type="password" id="repassword">
       </div><br>
+        <span id="generated"></span>
       <div id="checkPasswords"></div>
       <div><input type="submit" value="Sign up!" id="signUp"></div>
       <div id="thankYou"></div>
@@ -123,6 +124,22 @@
           
         }
       });
+      
+      $("#password").change(generatePassword);
+      
+      function generatePassword(){
+        console.log("Working");
+        $.ajax({
+          type: "get",
+          url: "randomPassword.php",
+          dataType: "json",
+          
+          success: function(data){
+            $("#generated").html("Suggested password: " + data.generatedPassword);
+          }
+        });
+      }
+      
 
       $("#signUp").on("click", function(e) {
         var orgPassword = $("#password").val();
