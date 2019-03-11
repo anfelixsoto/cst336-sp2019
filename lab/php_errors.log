@@ -1,0 +1,2 @@
+[11-Mar-2019 21:03:16 UTC] PHP Parse error:  syntax error, unexpected 'antonio' (T_STRING), expecting ']' in /home/ubuntu/workspace/cst336-sp2019/lab/lab5/checkUsername.php on line 3
+[11-Mar-2019 21:03:42 UTC] PHP Parse error:  syntax error, unexpected 'antoniofelix' (T_STRING), expecting ']' in /home/ubuntu/workspace/cst336-sp2019/lab/lab5/checkUsername.php on line 8

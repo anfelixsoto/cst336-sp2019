@@ -63,7 +63,7 @@ table, th, td {
     /* global $*/
     $.ajax({
         type: "get",
-        url: "https://antoniofelix-cst336s2019.herokuapp.com/practice/p6/getRandomProduct.php",
+        url: "getRandomProduct.php",
         dataType: "json",
         
         success: function(data){
@@ -83,7 +83,7 @@ table, th, td {
     function getPromoCode() {
         $.ajax({
             type: "get",
-            url: "https://antoniofelix-cst336s2019.herokuapp.com/practice/p6/applyPromoCode.php",
+            url: "applyPromoCode.php",
             dataType: "json",
             data: {
                 "format": "geojson",

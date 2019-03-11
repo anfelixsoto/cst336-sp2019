@@ -99,31 +99,43 @@
     $("#userName").change(checkUser);
 
     function checkUser() {
-      let usernameArray = ["antoniofelix118", "anfelix", "antfelix", "felix123"];
-      for (var i = 0; i < usernameArray.length; i++) {
-        let populatedUser = usernameArray[i];
-        let inputUser = $("#userName").val();
-        console.log(populatedUser);
-        console.log(inputUser);
-        if (inputUser == populatedUser) {
-          $("#userError").html("Username is taken").css("color", "red");
-          break;
+      $.ajax({
+        type: "get",
+        url: "checkUsername.php",
+        dataType: "json",
+        data: {
+          "format": "geojson",
+          "usedUserName": $("#userName").val()
+        },
+        success: function(data) {
+          var index = -1;
+          for(var i = 0; i < data.length;i++){
+            if(data[i].usedUserName == $("#userName").val()){
+              index = i;
+            }
+            
+            if(index == -1){
+              $("#userError").html("Username is available").css("color", "green");
+            }else{
+              $("#userError").html("Username is taken").css("color", "red");
+            }
+          }
+          
         }
-        $("#userError").html("Username is available").css("color", "green");
-      }
-    }
+      });
 
-    $("#signUp").on("click", function(e) {
-      var orgPassword = $("#password").val();
-      var confirmPassword = $("#repassword").val();
-      if (orgPassword != confirmPassword) {
-        $("#checkPasswords").html("Passwords do not match!").css("color", "red");
-        e.preventDefault();
-      }
-      else {
-        $("#checkPasswords").hmtl("Passwords match!").css("color", "green");
-      }
-    });
+      $("#signUp").on("click", function(e) {
+        var orgPassword = $("#password").val();
+        var confirmPassword = $("#repassword").val();
+        if (orgPassword != confirmPassword) {
+          $("#checkPasswords").html("Passwords do not match!").css("color", "red");
+          e.preventDefault();
+        }
+        else {
+          $("#checkPasswords").hmtl("Passwords match!").css("color", "green");
+        }
+      });
+    }
   </script>
 </body>
 

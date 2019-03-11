@@ -1,6 +1,3 @@
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Headers: Authorization");
-
 <?php
 $discount = array();
 $discount["discountCode"] = "getfifty";
