@@ -128,7 +128,6 @@
       $("#password").change(generatePassword);
       
       function generatePassword(){
-        console.log("Working");
         $.ajax({
           type: "get",
           url: "randomPassword.php",

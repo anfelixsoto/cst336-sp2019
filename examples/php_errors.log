@@ -1,0 +1,12 @@
+[13-Mar-2019 21:54:32 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'jahenderson'@'localhost' (using password: NO)' in /home/ubuntu/workspace/cst336-sp2019/examples/Wk08/ottermart.php:46
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/examples/Wk08/ottermart.php(46): PDO->__construct('mysql:host=127....', 'jahenderson', '')
+#1 /home/ubuntu/workspace/cst336-sp2019/examples/Wk08/ottermart.php(11): onGet()
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/examples/Wk08/ottermart.php on line 46
+[13-Mar-2019 21:54:55 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'jahenderson'@'localhost' (using password: NO)' in /home/ubuntu/workspace/cst336-sp2019/examples/Wk08/ottermart.php:46
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/examples/Wk08/ottermart.php(46): PDO->__construct('mysql:host=127....', 'jahenderson', '')
+#1 /home/ubuntu/workspace/cst336-sp2019/examples/Wk08/ottermart.php(11): onGet()
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/examples/Wk08/ottermart.php on line 46
