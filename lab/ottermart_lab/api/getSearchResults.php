@@ -1,17 +1,15 @@
 <?php
     include '../dbConnection.php';
-    $conn = getDatabaseConnectiom("ottermart");
-    
+    $conn = getDatabaseConnection("ottermart");
     $namedParameters = array();
     $sql = "SELECT * FROM om_product WHERE 1";
     
-    //checks whether user has typed something in the "Product" text box
-    if(!empty($_GET['product'])) {
+    if(!empty($_GET['product'])){
         $sql .= "AND productName LIKE :productName";
         $namedParameters[":productName"] = "%" . $_GET['product'] . "%";
     }
     
-    if(!empty($_GET['catergory'])){
+    if(!empty($_GET['category'])){
         $sql .= "AND catId = :categoryId";
         $namedParameters[":categoryId"] = $_GET['category'];
     }
@@ -29,13 +27,13 @@
     if(isset($_GET['orderBy'])){
         if($_GET['orderBy'] == "price"){
             $sql .= "ORDER BY price";
-        } else if($_GET['orderBy'] == "name"){
+        }
+        else if($_GET['orderBy'] == "name"){
             $sql .= "ORDER BY productName";
         }
     }
-   
-   $stmt = $conn->prepare($sql);
-   $stmt->execute($namedParameters);
-   $records = $stmt->fetchAll(PDO:: FETCH_ASSOC);
-   echo json_encode($records);  
+    $stmt = $conn->prepare($sql);
+    $stmt->execute($namedParameters);
+    $records = $stmt->fetchALL(PDO::FETCH_ASSOC);
+    echo json_encode($records);
 ?>
