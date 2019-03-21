@@ -13,6 +13,6 @@
     
     $stmt = $conn->prepare($sql);
     $stmt->execute($np);
-    $records = $stmt->fetchAll(PDO::FETCH_ASSPC);
+    $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
     echo json_encode($records);
 ?>

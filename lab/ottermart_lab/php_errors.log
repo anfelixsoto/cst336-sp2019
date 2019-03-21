@@ -1070,3 +1070,146 @@ Stack trace:
 #0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(36): PDOStatement->execute(Array)
 #1 {main}
   thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 36
+[21-Mar-2019 00:22:31 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'catId = '4'' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(36): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 36
+[21-Mar-2019 00:22:31 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'catId = '4'' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(36): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 36
+[21-Mar-2019 00:22:32 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'catId = '4'' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(36): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 36
+[21-Mar-2019 00:22:33 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'catId = '4'' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(36): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 36
+[21-Mar-2019 00:29:39 UTC] PHP Fatal error:  Undefined class constant 'FETCH_ASSPC' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getPurchaseHistory.php on line 16
+[21-Mar-2019 00:29:39 UTC] PHP Stack trace:
+[21-Mar-2019 00:29:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getPurchaseHistory.php:0
+[21-Mar-2019 00:30:15 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'catId = '5'' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(36): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 36
+[21-Mar-2019 00:32:35 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'catId = '5'' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(36): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 36
+[21-Mar-2019 00:35:19 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'productName LIKE '%Apple%'' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(36): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 36
+[21-Mar-2019 00:43:24 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'catId = '5'' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(36): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 36
+[21-Mar-2019 00:43:30 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'catId = '5'' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(36): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 36
+[21-Mar-2019 00:44:26 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BY price' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(36): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 36
+[21-Mar-2019 00:44:28 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BY price' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(36): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 36
+[21-Mar-2019 00:48:35 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'catId = '5'' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(36): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 36
+[21-Mar-2019 00:48:36 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'catId = '5'' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(36): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 36
+[21-Mar-2019 00:49:11 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(36): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 36
+[21-Mar-2019 00:49:13 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(36): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 36
+[21-Mar-2019 00:51:10 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(36): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 36
+[21-Mar-2019 00:51:14 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(36): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 36
+[21-Mar-2019 01:01:57 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(36): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 36
+[21-Mar-2019 01:02:00 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(36): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 36
+[21-Mar-2019 01:02:06 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(36): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 36
+[21-Mar-2019 01:02:09 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(36): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 36
+[21-Mar-2019 01:02:12 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(36): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 36
+[21-Mar-2019 01:05:11 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(36): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 36
+[21-Mar-2019 01:05:42 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'catId = '5'' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(36): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 36
+[21-Mar-2019 01:09:26 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: parameter was not defined' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(36): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 36
+[21-Mar-2019 01:09:28 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: parameter was not defined' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(36): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 36
+[21-Mar-2019 01:09:39 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BY productName' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(36): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 36
+[21-Mar-2019 01:09:44 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BY price' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:36
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(36): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 36

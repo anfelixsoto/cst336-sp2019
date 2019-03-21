@@ -24,16 +24,21 @@
                 });
 
                 $("#searchForm").on("click", function(){
+                    console.log($("[name=product]").val());
+                    console.log($("[name=category]").val());
+                    console.log($("[name=priceFrom]").val());
+                    console.log($("[name=priceTo]").val());
+                    console.log($("[name=orderBy]:checked").val());
                     $.ajax({
                         type: "GET",
                         url: "api/getSearchResults.php",
                         dataType: "json",
                         data: {
-                            "product" : $("#product").val(),
-                            "category" : $("#categories").val(),
+                            "product" : $("[name=product]").val(),
+                            "category" : $("[name=category]").val(),
                             "priceFrom" : $("[name=priceFrom]").val(),
                             "priceTo" : $("[name=priceTo]").val(),
-                            "orderBy" : $("[name=orderBy]:checked").val(),
+                            "orderBy" : $("[name=orderBy]:checked").val()
                         },
                         success: function(data, status) {
                             $("#results").html("<h3> Products Found: </h3>");
@@ -43,7 +48,7 @@
                             });
                         }
                     });
-                }); //searchForm
+                });
 
                 $(document).on('click', '.historyLink', function(){
                     $('#purchaseHistoryModal').modal("show");
@@ -67,10 +72,9 @@
                             }
                         }
                     });
-                }); //historyLink
-
-
-            });//documentReady
+                });
+            });
+            
         </script>
         <style>
              h1 {
@@ -110,7 +114,7 @@
     </head>
     <body>
         <div>
-            <div class="jumbotron"><h1>  OtterMart Product Search </h1></div>
+            <div><h1>  OtterMart Product Search </h1></div>
             <form>
                 Product: <input type="text" name="product" id="product" />
                 <br><br>
