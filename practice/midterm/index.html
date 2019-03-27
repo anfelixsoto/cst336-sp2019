@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Midterm Practice</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script>
+        /*global $*/
+        $(document).ready(function(){
+            var subtotal = 0;
+            var randomq;
+            var randomPrice;
+            $.ajax({
+               type:"GET",
+               url:"api/getProduct.php",
+               dataType:"json",
+               success: function(data,status){
+                   data.forEach(function(key){
+                      $("#categories").append("<option value=" + key["productId"] + ">" + key["productName"] + " $" + key['productPrice'] + "</option>"); 
+                   });
+               }
+            });
+            
+            $.ajax({
+                type: "GET",
+                url:"api/getRandom.php",
+                dataType: "json",
+                success: function(data,status){
+                        $("#random").append("<a href='#' class='historyLink' id='" + data.productId + "'>" + data.productName + "</a> ");
+                        randomPrice = data.productPrice;
+                        $("#random").append("<td id='price" + data.productId + "'>" + "$" + data.productPrice + "</td>");
+                        $("#random").append("<td id='random" + data.productId + "'>" + "<input type='text' style='width: 60px' id='q" + data.productId + "'/>" + "</td>");
+                        randomq = 'random' + data.productId;
+                        $("random").append("<td id='total" + data.productId + "'></td>");
+                }
+            });
+            
+            $("#randomq").change(function(){
+                console.log($("#randomPrice").val());
+            });
+            
+            $("#wanted").change(function(){
+               $.ajax({
+                   type: "GET",
+                   url: "api/getProductInfo.php",
+                   dataType: "json",
+                   data: {
+                        "productId": $("[name=category]").val()
+                   },
+                   success:function(data,status){
+                       data.forEach(function(key){
+                            $("#selected").append("<a href='#' class='historyLink' id='" + key['productId'] + "'>" + key['productName'] + "</a> ");
+                            $("#selected").append("<td id='price" + key['productId'] + "'>" + "$" + key['productPrice'] + "</td>");
+                            $("#selected").append("<td id='selected" + key['productId'] + "'>" + "<input type='text' style='width: 60px' id='q" + key['productId'] + "'value = " + $("#wanted").val() + ">");
+                            $("#selected").append("<td id='total" + key['productId'] + "'>" + "$" + key['productPrice'] * $("#wanted").val());
+                            subtotal += (key['productPrice'] * $("#wanted").val()).toFixed(2);
+                            $("#subtotal").html("$" + subtotal);
+                       });
+                   }
+               });
+            });
+            
+            $("#code").change(function(){
+               $.ajax({
+                  type:"GET",
+                  url:"api/getCodes.php",
+                  dataType: "json",
+                  data: {
+                      "promoCode": $("#code").val()
+                  },
+                  success: function(data){
+                      data.forEach(function(key){
+                          var discountValue = key['discount']/100;
+                          $("#discountAmount").html(key['discount'] + "%");
+                          $("#subtotal").html()
+                      });
+                  }
+               });
+            });
+        });
+       
+    </script>
+
+</head>
+
+<body>
+    <h1> Discount Shopping! </h1>
+
+    <table align="center">
+        <tr>
+            <th>Product</th>
+            <th>Unit Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+        </tr>
+        
+        <tr id="random"></tr>
+        
+        <tr id="selected"></tr>
+
+        <tr>
+            <td>
+                <select name="category" id="categories">
+                    <option value="">Select One</option>
+                </select>
+            </td>
+            <td id="empty"></td>
+            <td id="q">
+                <input type="text" style="width: 60px" name="amountwanted" id="wanted">
+            </td>
+            <td id="empty"></td>
+        </tr>
+
+        <tr>
+            <td>Discount</td>
+            <td id="empty"></td>
+            <td id="discountAmount"></td>
+            <td id="newAmount"></td>
+        </tr>
+
+        <tr>
+            <td>Subtotal</td>
+            <td id="empty"></td>
+            <td id="empty"></td>
+            <td id="subtotal"></td>
+        </tr>
+
+        <tr>
+            <td>Tax(10%)</td>
+            <td id="empty"></td>
+            <td id="empty"></td>
+            <td id="tax"></td>
+        </tr>
+
+        <tr>
+            <td>Total</td>
+            <td id="empty"></td>
+            <td id="empty"></td>
+            <td id="grandTotal"></td>
+        </tr>
+    </table>
+    <br>
+    <span id="promo">
+        Promo Code: <input type="text" name="promoCode" id="code"/>
+    </span>
+</body>
+
+</html>

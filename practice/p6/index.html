@@ -90,7 +90,7 @@ table, th, td {
                 "discountCode": $("#userInput").val()
             },
             success: function(data) {
-                console.log(data.discount)
+                console.log(data.discount);
                 $("#discountAmount").htm(data.discount);
             }
         });

@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title> OtterMart Product Search </title>
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -11,7 +12,6 @@
         <script>
             /*global $*/
             $(document).ready(function(){
-
                 $.ajax({
                     type: "GET",
                     url: "api/getCategories.php",
@@ -24,11 +24,6 @@
                 });
 
                 $("#searchForm").on("click", function(){
-                    console.log($("[name=product]").val());
-                    console.log($("[name=category]").val());
-                    console.log($("[name=priceFrom]").val());
-                    console.log($("[name=priceTo]").val());
-                    console.log($("[name=orderBy]:checked").val());
                     $.ajax({
                         type: "GET",
                         url: "api/getSearchResults.php",
@@ -44,7 +39,7 @@
                             $("#results").html("<h3> Products Found: </h3>");
                             data.forEach(function(key) {
                                 $("#results").append("<a href='#' class='historyLink' id='" + key['productId'] + "'>History</a> ");
-                                $("#results").append(key['productName']+ " " +key['productDescription']+ " " +key['price'] + "<br>");
+                                $("#results").append(key['productName']+ " " +key['productDescription']+ " $" +key['price'] + "<br>");
                             });
                         }
                     });
@@ -64,7 +59,7 @@
                                 $("#history").append("<img src='" + data[0]['productImage'] + "' width='200' /> <br />");
                                 data.forEach(function(key) {
                                     $("#history").append("Purchase Date: " + key['purchaseDate'] + "<br />");
-                                    $("#history").append("Unit Price: " + key['unitPrice'] + "<br />");
+                                    $("#history").append("Unit Price: $" + key['unitPrice'] + "<br />");
                                     $("#history").append("Quantity: " + key['quantity'] + "<br />");
                                 });
                             } else {
@@ -144,7 +139,7 @@
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title">Modal title</h5>
+                <h5 class="modal-title">Product History</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>

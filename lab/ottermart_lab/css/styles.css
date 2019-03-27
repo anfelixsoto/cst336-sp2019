@@ -1,0 +1,33 @@
+ h1 {
+                background-color: lightblue;
+                color:white;
+                border-color: lightblue;
+                border-radius: 50px;
+            }body{
+                text-align: center;
+                font-family: 'ZCOOL QingKe HuangYou', cursive;
+                border-radius: 50px;
+                background-color: #CCFFCC;
+                color: black;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                opacity: 0.9;
+            }input,select {
+                -moz-border-radius: 15px;
+                border-radius: 10px;
+                border: solid 2px black;
+                padding: 5px
+            }#searchForm{
+                border-radius: 50px;
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 10px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 15%;
+                opacity: 0.9;
+            }

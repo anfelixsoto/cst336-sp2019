@@ -1,0 +1,49 @@
+[25-Mar-2019 22:29:23 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'midterm_practice.om_category' doesn't exist' in /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getProduct.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getProduct.php(8): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getProduct.php on line 8
+[27-Mar-2019 01:57:39 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'midterm_practice.mp_products' doesn't exist' in /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getProductInfo.php:9
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getProductInfo.php(9): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getProductInfo.php on line 9
+[27-Mar-2019 01:58:00 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'midterm_practice.mp_products' doesn't exist' in /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getProductInfo.php:9
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getProductInfo.php(9): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getProductInfo.php on line 9
+[27-Mar-2019 06:59:12 UTC] PHP Fatal error:  Call to undefined method PDOStatement::excute() in /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getProductInfo.php on line 13
+[27-Mar-2019 06:59:12 UTC] PHP Stack trace:
+[27-Mar-2019 06:59:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getProductInfo.php:0
+[27-Mar-2019 06:59:34 UTC] PHP Fatal error:  Call to undefined method PDOStatement::excute() in /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getProductInfo.php on line 13
+[27-Mar-2019 06:59:34 UTC] PHP Stack trace:
+[27-Mar-2019 06:59:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getProductInfo.php:0
+[27-Mar-2019 07:00:18 UTC] PHP Fatal error:  Call to undefined method PDOStatement::excute() in /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getProductInfo.php on line 13
+[27-Mar-2019 07:00:18 UTC] PHP Stack trace:
+[27-Mar-2019 07:00:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getProductInfo.php:0
+[27-Mar-2019 07:13:44 UTC] PHP Warning:  include(../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getProductInfo.php on line 3
+[27-Mar-2019 07:13:44 UTC] PHP Stack trace:
+[27-Mar-2019 07:13:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getProductInfo.php:0
+[27-Mar-2019 07:13:44 UTC] PHP Warning:  include(): Failed opening '../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getProductInfo.php on line 3
+[27-Mar-2019 07:13:44 UTC] PHP Stack trace:
+[27-Mar-2019 07:13:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getProductInfo.php:0
+[27-Mar-2019 07:13:44 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getProductInfo.php on line 4
+[27-Mar-2019 07:13:44 UTC] PHP Stack trace:
+[27-Mar-2019 07:13:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getProductInfo.php:0
+[27-Mar-2019 17:04:35 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: parameter was not defined' in /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getProductInfo.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getProductInfo.php(14): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getProductInfo.php on line 14
+[27-Mar-2019 17:04:46 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: parameter was not defined' in /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getProductInfo.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getProductInfo.php(14): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getProductInfo.php on line 14
+[27-Mar-2019 17:30:39 UTC] PHP Fatal error:  Call to undefined function sizesof() in /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getRandom.php on line 12
+[27-Mar-2019 17:30:39 UTC] PHP Stack trace:
+[27-Mar-2019 17:30:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getRandom.php:0
+[27-Mar-2019 17:31:02 UTC] PHP Fatal error:  Call to undefined function sizesof() in /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getRandom.php on line 12
+[27-Mar-2019 17:31:02 UTC] PHP Stack trace:
+[27-Mar-2019 17:31:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getRandom.php:0
