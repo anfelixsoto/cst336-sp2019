@@ -3,7 +3,7 @@
     include '../connect.php';
     $conn = getDatabaseConnection("midterm_practice");
     $namedParameters = array();
-    $sql = "SELECT * FROM mp_product WHERE 1 ";
+    $sql = "SELECT * FROM mp_codes WHERE 1 ";
 
     if(!empty($_GET['productId'])){
         $sql .= "AND productId = :productId";

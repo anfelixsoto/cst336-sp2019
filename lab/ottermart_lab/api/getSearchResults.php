@@ -17,15 +17,15 @@
     }
     
     if(!empty($_GET['priceFrom'])){
-        $sql .= "AND price >= :priceFrom";
-        $namedParameters[":priceFrom"] = $_GET['priceFrom'];
+     $sql .= " AND price >= :priceFrom";
+    $namedParameters[":priceFrom"] = $_GET['priceFrom'];
     }
     
     if(!empty($_GET['priceTo'])){
-        $sql .= "AND price <= :priceTo";
-        $namedParameters[":priceTo"] = $_GET['priceTo'];
+    $sql .= " AND price <= :priceTo";
+    $namedParameters[":priceTo"] = $_GET['priceTo']; 
     }
-    
+
     if(isset($_GET['orderBy'])){
         if($_GET['orderBy'] == "price"){
             $sql .= "ORDER BY price";

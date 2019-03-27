@@ -1,17 +1,23 @@
 <?php
-function getDatabaseConnection($dbname = 'ottermart'){
+
+function getDatabaseConnection(){
+    $connUrl = getenv('JAWSDB_MARIA_URL');
+    $hasConnUrl = !empty($connUrl);
+    $connParts = null;
+    if ($hasConnUrl) {
+        $connParts = parse_url($connUrl);
+    }
     
-    $host='localhost';//cloud 9
-    //$dbname = 'tcp';
-    $username='root';
-    $password='';
+    $host = $hasConnUrl ? $connParts['host']: getenv('IP');
+    $dbname = $hasConnUrl ? ltrim($connParts['path'],'/') : 'ottermart';
+    $username = $hasConnUrl ? $connParts['user'] : getenv('C9_USER');
+    $password = $hasConnUrl ? $connParts['pass'] : '';
     
-    //creates db connection
-    $dbConn=new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $dbConn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
     
-    //display errors when accessing tables
-    $dbConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $dbConn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
     return $dbConn;
+ 
 }
 ?>

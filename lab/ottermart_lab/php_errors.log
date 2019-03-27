@@ -1363,3 +1363,23 @@ Stack trace:
 #0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(39): PDOStatement->execute(Array)
 #1 {main}
   thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 39
+[27-Mar-2019 19:52:27 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: parameter was not defined' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:39
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(39): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 39
+[27-Mar-2019 19:52:33 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: parameter was not defined' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:39
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(39): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 39
+[27-Mar-2019 19:53:50 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: parameter was not defined' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:39
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(39): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 39
+[27-Mar-2019 19:54:29 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: parameter was not defined' in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php:39
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php(39): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/ottermart_lab/api/getSearchResults.php on line 39

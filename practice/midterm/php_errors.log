@@ -47,3 +47,18 @@ Stack trace:
 [27-Mar-2019 17:31:02 UTC] PHP Fatal error:  Call to undefined function sizesof() in /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getRandom.php on line 12
 [27-Mar-2019 17:31:02 UTC] PHP Stack trace:
 [27-Mar-2019 17:31:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getRandom.php:0
+[27-Mar-2019 19:21:00 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'midterm_practice.mp_code' doesn't exist' in /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getCodes.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getCodes.php(14): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getCodes.php on line 14
+[27-Mar-2019 19:21:06 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'midterm_practice.mp_code' doesn't exist' in /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getCodes.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getCodes.php(14): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getCodes.php on line 14
+[27-Mar-2019 19:25:30 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'midterm_practice.mp_code' doesn't exist' in /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getCodes.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getCodes.php(14): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/practice/midterm/api/getCodes.php on line 14

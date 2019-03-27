@@ -3,11 +3,11 @@
     include '../connect.php';
     $conn = getDatabaseConnection("midterm_practice");
     $namedParameters = array();
-    $sql = "SELECT * FROM mp_code WHERE 1 ";
+    $sql = "SELECT * FROM mp_codes WHERE 1 ";
 
-    if(!empty($_GET['productId'])){
-        $sql .= "AND productId = :productId";
-        $namedParameters[":productId"] = $_GET['productId'];
+    if(!empty($_GET['promoCode'])){
+        $sql .= "AND promoCode LIKE :promoCode";
+        $namedParameters[":promoCode"] = "%" . $_GET['promoCode'] . "%";
     }
     
     $stmt = $conn->prepare($sql);
