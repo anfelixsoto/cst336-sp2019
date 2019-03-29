@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>History @ Cinder</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script>
+        /*global $*/
+        $(document).ready(function() {
+            
+            $.ajax({
+                type: "GET",
+                url: "api/getMatch.php",
+                dataType: "json",
+                success: function(data, status) {
+                    data.forEach(function(key) {
+                        $("#results").append("<img src='" + key['picture_url'] + "'/>" + " " + key['username'] + " " +  key["answer_timestamp"]  + "<br>");
+                        
+                    });
+                }
+            });
+        });
+    </script>
+
+    <style>
+        header,
+        main,
+        nav,
+        footer {
+            text-align: center;
+        }
+
+        nav a {
+            padding: 15px;
+            padding-bottom: 4px;
+            font-size: 1.8em;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            border-bottom: 2px orange solid;
+            font-size: 2em;
+            transition: .9s;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="match.html">Match</a>
+        <a href="history.html">History</a>
+    </nav>
+    <header>
+        <h1>History</h1>
+    </header>
+    <table>
+        <tr>
+            <th></th>
+            <th>Username</th>
+            <th>Status</th>
+            <th>When</th>
+            <th></th>
+        </tr>
+
+        <tr>
+            <th id="results"></th>
+        </tr>
+
+    </table>
+
+    <div class="modal fade" id="purchaseHistoryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Product History</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div id="history"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

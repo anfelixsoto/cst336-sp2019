@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Match @ Cinder</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <style>
+        .buttons {
+            text-align: center;
+        }
+
+        header,
+        main,
+        nav,
+        footer {
+            text-align: center;
+        }
+
+        nav a {
+            padding: 15px;
+            padding-bottom: 4px;
+            font-size: 1.8em;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            border-bottom: 2px orange solid;
+            font-size: 2em;
+            transition: .9s;
+        }
+    </style>
+    <script>
+        /*global $*/
+        $(document).ready(function() {
+            $.ajax({
+                type: "GET",
+                url: "api/getRandomUser.php",
+                dataType: "json",
+                success: function(data, status) {
+                    $("#userImage").html("<img src='" + data.picture_url + "'/>");
+                    $("#userName").html("<h1>About @" + data.username + "</h1>" + data.about_me);
+                }
+            });
+
+            $("#like").on("click", function(e) {
+                $.ajax({
+                    type: "GET",
+                    url: "api/getRandomUser.php",
+                    dataType: "json",
+                    success: function(data, status) {
+                        $("#userImage").html("<img src='" + data.picture_url + "'/>");
+                        $("#userName").html("<h1>About @" + data.username + "</h1>" + data.about_me);
+                    }
+                })
+            });
+
+            $("#meh").on("click", function(e) {
+                $.ajax({
+                    type: "GET",
+                    url: "api/getRandomUser.php",
+                    dataType: "json",
+                    success: function(data, status) {
+                        $("#userImage").html("<img src='" + data.picture_url + "'/>");
+                        $("#userName").html("<h1>About @" + data.username + "</h1>" + data.about_me);
+                    }
+                })
+            });
+
+            $("#dislike").on("click", function(e) {
+                $.ajax({
+                    type: "GET",
+                    url: "api/getRandomUser.php",
+                    dataType: "json",
+                    success: function(data, status) {
+                        $("#userImage").html("<img src='" + data.picture_url + "'/>");
+                        $("#userName").html("<h1>About @" + data.username + "</h1>" + data.about_me);
+                    }
+                })
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <nav>
+        <hr width="50%"/>
+        <a href="match.html">Match</a>
+        <a href="history.html">History</a>
+    </nav>
+    <header>
+        <h1>Match</h1>
+    </header>
+    <table>
+        <tr>
+            <td id="userImage"></td>
+            <td id="userName"></td>
+        </tr>
+    </table>
+    <br><br>
+    <div id="buttons">
+        <button id="dislike" value="-1">Dislike</button>
+        <button id="meh" value="0">?</button>
+        <button id="like" value="1">Like</button>
+    </div>
+</body>
+
+</html>
