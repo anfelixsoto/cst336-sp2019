@@ -1,6 +1,11 @@
 <?php
 
 function getDatabaseConnection(){
+    
+    $host = "localhost";
+    $username = "root";
+    $password= "";
+    
     $connUrl = getenv('JAWSDB_MARIA_URL');
     $hasConnUrl = !empty($connUrl);
     $connParts = null;
@@ -10,7 +15,7 @@ function getDatabaseConnection(){
     
     $host = $hasConnUrl ? $connParts['host']: getenv('IP');
     $dbname = $hasConnUrl ? ltrim($connParts['path'],'/') : 'ottermart';
-    $username = $hasConnUrl ? $connParts['user'] : getenv('antoniofelix118');
+    $username = $hasConnUrl ? $connParts['user'] : getenv('C9_USER');
     $password = $hasConnUrl ? $connParts['pass'] : '';
     
     $dbConn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
