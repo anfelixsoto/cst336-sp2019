@@ -1,29 +1,33 @@
 <?php
 
-function getDatabaseConnection($dnmae = 'ottermart'){
+
+function getDatabaseConnection($dbname = 'hangman'){
     
-    $host = "localhost";
-    $username = "root";
-    $password= "";
+    $host = 'localhost';//cloud 9
+    //$dbname = 'tcp';
+    $username = 'root';
+    $password = '';
     
-    if(strpos($_SERVER['HTTP_HOST'],'herokuapp') != false){
-        $url = parse_url('JAWSDB_MARIA_URL');
+    //using different database variables in Heroku
+    if  (strpos($_SERVER['HTTP_HOST'], 'herokuapp') !== false) {
+        $url = parse_url(getenv("JAWSDB_MARIA_URL"));
         $host = $url["host"];
         $dbname = substr($url["path"], 1);
         $username = $url["user"];
         $password = $url["pass"];
-
-    }
+    } 
     
-    $host = $hasConnUrl ? $connParts['host']: getenv('IP');
-    $dbname = $hasConnUrl ? ltrim($connParts['path'],'/') : 'ottermart';
-    $username = $hasConnUrl ? $connParts['user'] : getenv('C9_USER');
-    $password = $hasConnUrl ? $connParts['pass'] : '';
-    
+    //creates db connection
     $dbConn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    $dbConn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
+    //display errors when accessing tables
+    $dbConn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
     return $dbConn;
- 
+    
 }
+
+
+
+
 ?>
