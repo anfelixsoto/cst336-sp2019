@@ -1,0 +1,85 @@
+[08-Apr-2019 19:10:01 UTC] PHP Warning:  include(dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/get_word_api.php on line 5
+[08-Apr-2019 19:10:01 UTC] PHP Stack trace:
+[08-Apr-2019 19:10:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/get_word_api.php:0
+[08-Apr-2019 19:10:01 UTC] PHP Warning:  include(): Failed opening 'dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/get_word_api.php on line 5
+[08-Apr-2019 19:10:01 UTC] PHP Stack trace:
+[08-Apr-2019 19:10:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/get_word_api.php:0
+[08-Apr-2019 19:10:01 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/get_word_api.php on line 6
+[08-Apr-2019 19:10:01 UTC] PHP Stack trace:
+[08-Apr-2019 19:10:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/get_word_api.php:0
+[08-Apr-2019 20:05:36 UTC] PHP Fatal error:  Call to undefined method PDOStatement::excute() in /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php on line 15
+[08-Apr-2019 20:05:36 UTC] PHP Stack trace:
+[08-Apr-2019 20:05:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php:0
+[08-Apr-2019 20:05:54 UTC] PHP Fatal error:  Call to undefined method PDOStatement::excute() in /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php on line 15
+[08-Apr-2019 20:05:54 UTC] PHP Stack trace:
+[08-Apr-2019 20:05:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php:0
+[08-Apr-2019 20:06:57 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'hangman.hangman' doesn't exist' in /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php(15): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php on line 15
+[08-Apr-2019 20:09:59 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: parameter was not defined' in /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php(15): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php on line 15
+[08-Apr-2019 20:11:28 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: parameter was not defined' in /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php(15): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php on line 15
+[08-Apr-2019 20:12:11 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: parameter was not defined' in /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php(15): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php on line 15
+[08-Apr-2019 20:19:39 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: parameter was not defined' in /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php(15): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php on line 15
+[08-Apr-2019 20:24:11 UTC] PHP Fatal error:  Call to undefined method PDOStatement::excute() in /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php on line 12
+[08-Apr-2019 20:24:11 UTC] PHP Stack trace:
+[08-Apr-2019 20:24:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php:0
+[08-Apr-2019 20:24:35 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php on line 10
+[08-Apr-2019 20:24:35 UTC] PHP Stack trace:
+[08-Apr-2019 20:24:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php:0
+[08-Apr-2019 20:25:32 UTC] PHP Warning:  include(dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php on line 4
+[08-Apr-2019 20:25:32 UTC] PHP Stack trace:
+[08-Apr-2019 20:25:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php:0
+[08-Apr-2019 20:25:32 UTC] PHP Warning:  include(): Failed opening 'dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php on line 4
+[08-Apr-2019 20:25:32 UTC] PHP Stack trace:
+[08-Apr-2019 20:25:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php:0
+[08-Apr-2019 20:25:32 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php on line 10
+[08-Apr-2019 20:25:32 UTC] PHP Stack trace:
+[08-Apr-2019 20:25:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php:0
+[08-Apr-2019 20:25:42 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php on line 10
+[08-Apr-2019 20:25:42 UTC] PHP Stack trace:
+[08-Apr-2019 20:25:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php:0
+[08-Apr-2019 20:26:13 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php on line 10
+[08-Apr-2019 20:26:13 UTC] PHP Stack trace:
+[08-Apr-2019 20:26:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php:0
+[08-Apr-2019 20:26:49 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php on line 10
+[08-Apr-2019 20:26:49 UTC] PHP Stack trace:
+[08-Apr-2019 20:26:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php:0
+[08-Apr-2019 20:26:50 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php on line 10
+[08-Apr-2019 20:26:50 UTC] PHP Stack trace:
+[08-Apr-2019 20:26:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php:0
+[08-Apr-2019 20:26:52 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php on line 10
+[08-Apr-2019 20:26:52 UTC] PHP Stack trace:
+[08-Apr-2019 20:26:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php:0
+[08-Apr-2019 20:27:04 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php on line 10
+[08-Apr-2019 20:27:04 UTC] PHP Stack trace:
+[08-Apr-2019 20:27:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php:0
+[08-Apr-2019 20:27:22 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php on line 10
+[08-Apr-2019 20:27:22 UTC] PHP Stack trace:
+[08-Apr-2019 20:27:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php:0
+[08-Apr-2019 20:27:23 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php on line 10
+[08-Apr-2019 20:27:23 UTC] PHP Stack trace:
+[08-Apr-2019 20:27:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php:0
+[08-Apr-2019 20:28:14 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php on line 10
+[08-Apr-2019 20:28:14 UTC] PHP Stack trace:
+[08-Apr-2019 20:28:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php:0
+[08-Apr-2019 20:28:15 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php on line 10
+[08-Apr-2019 20:28:15 UTC] PHP Stack trace:
+[08-Apr-2019 20:28:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/practice/p7/api/check_word.php:0

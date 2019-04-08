@@ -1,6 +1,6 @@
 <?php
 
-function getDatabaseConnection(){
+function getDatabaseConnection($dnmae = 'ottermart'){
     
     $host = "localhost";
     $username = "root";
@@ -11,7 +11,7 @@ function getDatabaseConnection(){
         $host = $url["host"];
         $dbname = substr($url["path"], 1);
         $username = $url["user"];
-        $password = $url["pass"]
+        $password = $url["pass"];
 
     }
     
