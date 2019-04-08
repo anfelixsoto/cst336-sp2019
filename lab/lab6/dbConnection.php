@@ -1,6 +1,11 @@
 <?php
 
-function getDatabaseConnection(){
+function getDatabaseConnection($dbname = 'ottermart'){
+    
+    $host = 'localhost';
+    $username = 'root';
+    $password = '';
+    
     $connUrl = getenv('JAWSDB_MARIA_URL');
     $hasConnUrl = !empty($connUrl);
     $connParts = null;
@@ -18,6 +23,5 @@ function getDatabaseConnection(){
     $dbConn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
     return $dbConn;
- 
-}
+ }
 ?>
