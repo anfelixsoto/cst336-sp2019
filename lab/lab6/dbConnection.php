@@ -1,7 +1,7 @@
 <?php
 
 
-function getDatabaseConnection($dbname = 'hangman'){
+function getDatabaseConnection($dbname = 'ottermart'){
     
     $host = 'localhost';//cloud 9
     //$dbname = 'tcp';
@@ -10,7 +10,7 @@ function getDatabaseConnection($dbname = 'hangman'){
     
     //using different database variables in Heroku
     if  (strpos($_SERVER['HTTP_HOST'], 'herokuapp') !== false) {
-        $url = parse_url(getenv("JAWSDB_MARIA_URL"));
+        $url = parse_url(getenv("JAWSDB_MARIA_SILVER"));
         $host = $url["host"];
         $dbname = substr($url["path"], 1);
         $username = $url["user"];
