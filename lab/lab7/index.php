@@ -6,11 +6,11 @@
     }
 ?>
 
-SS
 <!DOCTYPE html>
 <html>
     <head>
         <title>Otter Mart Product Management</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -19,6 +19,7 @@ SS
         <style>
             body {
                 margin-top: 50px;
+                margin: 70px;
             }footer{
                 text-align:center;
             }
@@ -39,7 +40,12 @@ SS
                 <button id="searchForm" class="btn btn-success">Search</button>
                 <button id="addButton" class="btn btn-primary">Add</button>
                 <br>
+                
+                <div id="message"></div>
+                <br>
+                
                 <div id="results"></div>
+                
             </div>
             
             <div class="modal fade" id="addingProducts" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -64,13 +70,14 @@ SS
                                     <option value="6">Toys</option>
                                     <option value="2">Video Games</option>
                                 </select><br><br>
-                                Product Name: <input type="text"></input><br><br>
-                                Description: <input type="text"></input><br><br>
-                                Price: <input type="text"></input>
+                                Product Name: <input type="text" id="nProductName" required></input><br><br>
+                                Description: <input  type="text" id="nProductDes" required></input><br><br>
+                                Picture Link: <input type="text" id="nProductPic" required></input><br><br>
+                                Price: <input type="text" id="nProductPrice" required></input>
                             </div>
                         </div>
                         <div class="modal-footer" id="modalFooter">
-                            <button type="button" class="btn btn-success">Save</button>
+                            <button type="button" id="saveProduct" class="btn btn-success">Save</button>
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         </div>
                     </div>
@@ -163,17 +170,27 @@ SS
                             "category": $("[name=category]").val()
                         },
                         success: function(data, status) {
-                            $("#results").html("<h3>List of Products:</h3>");
-                            data.forEach(function(key) {
-                                $("#results").append(key['productId'] + "." + " ");
-                                $("#results").append("<a href='#' class='historyLink' id='" + key['productId'] + "'>" + key['productName'] + "</a><br>");
-                            });
+                            if($("[name=category").val() >= 1){
+                                $("#results").html("<h3>List of Products:</h3>");
+                                data.forEach(function(key) {
+                                    $("#results").append(key['productId'] + "." + " ");
+                                    $("#results").append("<a href='#' class='historyLink' id='" + key['productId'] + "'>" + key['productName'] + "</a><br>");
+                                    $("#message").hide();
+                                });
+                            } else {
+                                $("#message").append("Please select a category from the list!").css("color","red");
+                            }
                         }
                     });
                 });
                 
                 $("#addButton").on("click",function(){
-                   $("#addingProducts").modal("show"); 
+                   //$("#addingProducts").modal("show");
+                   $.ajax({
+                       type: "POST",
+                       url:"api/addProduct.php",
+                       dataType: "json"
+                   })
                 });
                 
                 $.ajax({
@@ -188,8 +205,25 @@ SS
                         });
                     }
                 });
-                
-                
+                $("#saveProduct").on("click",function(){
+                    console.log( $("[name=category]").val());
+                    console.log($("#nProductName").val());
+                    console.log($("#nProductDes").val());
+                    console.log($("#nProductPic").val());
+                    console.log($("#nProductPrice").val());
+                    $.ajax({
+                        type: "POST",
+                        url: "api/addProduct.php",
+                        dataType: "json",
+                        data: {
+                            "catId": $("[name=category]").val(),
+                            "productName": $("#nProductName").val(),
+                            "productDescription": $("#nProductDes").val(),
+                            "pictureImage": $("#nProductPic").val(),
+                            "price": $("#nProductPrice").val()
+                        }
+                    });
+                });
                 
                 $(document).on('click', '.historyLink', function(){
                     $('#productHistoryModal').modal("show");
