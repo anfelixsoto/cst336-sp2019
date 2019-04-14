@@ -1,0 +1,59 @@
+body {
+                margin-top: 50px;
+                margin: 70px;
+            }footer{
+                text-align:center;
+            }table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                text-align: center;
+            }.editBttn{
+                background-color: white;
+                color: black;
+                border: none;
+                padding: 10px 24px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 12px;
+            }.deleteBttn{
+                background-color: #f44336;
+                color: white;
+                border: none;
+                padding: 10px 24px;
+                border-radius:5px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 12px;
+            }.saveBttn{
+                border-radius:5px;
+                background-color:blue;
+                color: white;
+                border: none;
+                padding: 10px 24px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 12px;
+            }.confirmBttn{
+                border-radius:5px;
+                background-color:blue;
+                color: white;
+                border: none;
+                padding: 10px 24px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 12px;
+            }.newBttn{
+                border-radius:5px;
+                background-color:blue;
+                color: white;
+                border: none;
+                padding: 10px 24px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 12px;
+            }

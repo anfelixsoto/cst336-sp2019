@@ -1,7 +1,7 @@
 <?php
      include '../connect.php';
     
-    $conn=getDatabaseConnection("ottermart2");
+    $conn=getDatabaseConnection("ottermart");
     
     $sql="SELECT productId, productName, productDescription, productImage, price FROM om_product ORDER BY productId ";
     

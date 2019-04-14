@@ -1,0 +1,94 @@
+[27-Mar-2019 21:14:03 UTC] PHP Warning:  include(.../connect.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getAnswerType.php on line 2
+[27-Mar-2019 21:14:03 UTC] PHP Stack trace:
+[27-Mar-2019 21:14:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/midterm/api/getAnswerType.php:0
+[27-Mar-2019 21:14:03 UTC] PHP Warning:  include(): Failed opening '.../connect.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getAnswerType.php on line 2
+[27-Mar-2019 21:14:03 UTC] PHP Stack trace:
+[27-Mar-2019 21:14:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/midterm/api/getAnswerType.php:0
+[27-Mar-2019 21:14:03 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getAnswerType.php on line 3
+[27-Mar-2019 21:14:03 UTC] PHP Stack trace:
+[27-Mar-2019 21:14:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/midterm/api/getAnswerType.php:0
+[27-Mar-2019 21:14:30 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'is_postive' in 'field list'' in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getAnswerType.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/midterm/api/getAnswerType.php(8): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getAnswerType.php on line 8
+[27-Mar-2019 21:14:44 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'is_postive' in 'field list'' in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getAnswerType.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/midterm/api/getAnswerType.php(8): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getAnswerType.php on line 8
+[27-Mar-2019 21:14:45 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'is_postive' in 'field list'' in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getAnswerType.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/midterm/api/getAnswerType.php(8): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getAnswerType.php on line 8
+[27-Mar-2019 21:14:53 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'is_postive' in 'order clause'' in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getAnswerType.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/midterm/api/getAnswerType.php(8): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getAnswerType.php on line 8
+[27-Mar-2019 21:15:12 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'is_postive' in 'order clause'' in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getAnswerType.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/midterm/api/getAnswerType.php(8): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getAnswerType.php on line 8
+[27-Mar-2019 21:26:19 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'match ORDER BY id' at line 1' in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getRandomUser.php:9
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/midterm/api/getRandomUser.php(9): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getRandomUser.php on line 9
+[27-Mar-2019 22:03:20 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'match ORDER BY user_id' at line 1' in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php(8): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php on line 8
+[27-Mar-2019 22:04:59 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'match ORDER BY user_id' at line 1' in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php(8): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php on line 8
+[27-Mar-2019 22:05:28 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'match' at line 1' in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php(8): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php on line 8
+[27-Mar-2019 22:06:31 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'match' at line 1' in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php(8): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php on line 8
+[27-Mar-2019 22:06:43 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'match' at line 1' in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php(8): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php on line 8
+[27-Mar-2019 22:07:42 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'match ORDER BY user_id' at line 1' in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php(8): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php on line 8
+[27-Mar-2019 22:37:28 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'match ORDER BY user_id' at line 1' in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php(8): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php on line 8
+[27-Mar-2019 22:37:47 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'match ORDER BY user_id' at line 1' in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php(8): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php on line 8
+[27-Mar-2019 22:40:09 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'match ORDER BY user_id' at line 1' in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php(8): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php on line 8
+[27-Mar-2019 22:43:23 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'match ORDER BY user_id' at line 1' in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php(8): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php on line 8
+[27-Mar-2019 22:49:13 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'match ORDER BY user_id' at line 1' in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php(8): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/midterm/api/getMatch.php on line 8

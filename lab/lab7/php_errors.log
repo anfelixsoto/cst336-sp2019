@@ -44,3 +44,162 @@ Stack trace:
 [05-Apr-2019 01:52:05 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/getSearchResults.php on line 4
 [05-Apr-2019 01:52:05 UTC] PHP Stack trace:
 [05-Apr-2019 01:52:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/getSearchResults.php:0
+[11-Apr-2019 19:51:44 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php on line 6
+[12-Apr-2019 06:40:27 UTC] PHP Parse error:  syntax error, unexpected '$products' (T_VARIABLE) in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/randomProduct.php on line 7
+[12-Apr-2019 06:40:50 UTC] PHP Parse error:  syntax error, unexpected '$products' (T_VARIABLE) in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/randomProduct.php on line 7
+[12-Apr-2019 06:43:16 UTC] PHP Parse error:  syntax error, unexpected '$products' (T_VARIABLE) in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/randomProduct.php on line 7
+[12-Apr-2019 08:23:07 UTC] PHP Fatal error:  Call to undefined function json() in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 11
+[12-Apr-2019 08:23:08 UTC] PHP Stack trace:
+[12-Apr-2019 08:23:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:0
+[12-Apr-2019 08:23:10 UTC] PHP Fatal error:  Call to undefined function json() in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 11
+[12-Apr-2019 08:23:10 UTC] PHP Stack trace:
+[12-Apr-2019 08:23:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:0
+[12-Apr-2019 08:31:57 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 13
+[12-Apr-2019 08:34:55 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'antoniofelix118'@'localhost' (using password: YES) in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 8
+[12-Apr-2019 08:34:55 UTC] PHP Stack trace:
+[12-Apr-2019 08:34:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:0
+[12-Apr-2019 08:34:55 UTC] PHP   2. mysqli->mysqli() /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:8
+[12-Apr-2019 16:04:34 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TO om_product (productId, productName, productDescription, productImage, price, ' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(20): PDO->query('INSERT TO om_pr...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 20
+[12-Apr-2019 16:04:35 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TO om_product (productId, productName, productDescription, productImage, price, ' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(20): PDO->query('INSERT TO om_pr...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 20
+[12-Apr-2019 16:04:39 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TO om_product (productId, productName, productDescription, productImage, price, ' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(20): PDO->query('INSERT TO om_pr...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 20
+[12-Apr-2019 16:04:40 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TO om_product (productId, productName, productDescription, productImage, price, ' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(20): PDO->query('INSERT TO om_pr...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 20
+[12-Apr-2019 16:04:40 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TO om_product (productId, productName, productDescription, productImage, price, ' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(20): PDO->query('INSERT TO om_pr...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 20
+[12-Apr-2019 16:04:40 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TO om_product (productId, productName, productDescription, productImage, price, ' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(20): PDO->query('INSERT TO om_pr...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 20
+[12-Apr-2019 16:04:40 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TO om_product (productId, productName, productDescription, productImage, price, ' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(20): PDO->query('INSERT TO om_pr...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 20
+[12-Apr-2019 16:05:59 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TO om_product (productId, productName, productDescription, productImage, price, ' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(20): PDO->query('INSERT TO om_pr...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 20
+[12-Apr-2019 23:11:22 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TO om_product (productId, productName, productDescription, productImage, price, ' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(20): PDO->query('INSERT TO om_pr...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 20
+[12-Apr-2019 23:11:23 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TO om_product (productId, productName, productDescription, productImage, price, ' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(20): PDO->query('INSERT TO om_pr...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 20
+[12-Apr-2019 23:11:24 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TO om_product (productId, productName, productDescription, productImage, price, ' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(20): PDO->query('INSERT TO om_pr...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 20
+[12-Apr-2019 23:11:24 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TO om_product (productId, productName, productDescription, productImage, price, ' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(20): PDO->query('INSERT TO om_pr...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 20
+[12-Apr-2019 23:11:24 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TO om_product (productId, productName, productDescription, productImage, price, ' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(20): PDO->query('INSERT TO om_pr...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 20
+[12-Apr-2019 23:11:24 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TO om_product (productId, productName, productDescription, productImage, price, ' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(20): PDO->query('INSERT TO om_pr...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 20
+[12-Apr-2019 23:11:24 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TO om_product (productId, productName, productDescription, productImage, price, ' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(20): PDO->query('INSERT TO om_pr...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 20
+[12-Apr-2019 23:11:24 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TO om_product (productId, productName, productDescription, productImage, price, ' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(20): PDO->query('INSERT TO om_pr...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 20
+[12-Apr-2019 23:11:24 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TO om_product (productId, productName, productDescription, productImage, price, ' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(20): PDO->query('INSERT TO om_pr...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 20
+[12-Apr-2019 23:11:24 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TO om_product (productId, productName, productDescription, productImage, price, ' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(20): PDO->query('INSERT TO om_pr...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 20
+[12-Apr-2019 23:11:26 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TO om_product (productId, productName, productDescription, productImage, price, ' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(20): PDO->query('INSERT TO om_pr...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 20
+[12-Apr-2019 23:11:26 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TO om_product (productId, productName, productDescription, productImage, price, ' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(20): PDO->query('INSERT TO om_pr...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 20
+[12-Apr-2019 23:11:26 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TO om_product (productId, productName, productDescription, productImage, price, ' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(20): PDO->query('INSERT TO om_pr...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 20
+[12-Apr-2019 23:11:26 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TO om_product (productId, productName, productDescription, productImage, price, ' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(20): PDO->query('INSERT TO om_pr...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 20
+[12-Apr-2019 23:11:26 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TO om_product (productId, productName, productDescription, productImage, price, ' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(20): PDO->query('INSERT TO om_pr...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 20
+[12-Apr-2019 23:30:56 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TO om_product (productId, productName, productDescription, productImage, price, ' at line 1' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(20): PDO->query('INSERT TO om_pr...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 20
+[13-Apr-2019 02:43:11 UTC] PHP Fatal error:  Class 'sqli' not found in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 7
+[13-Apr-2019 02:43:11 UTC] PHP Stack trace:
+[13-Apr-2019 02:43:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:0
+[13-Apr-2019 02:51:20 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php on line 14
+[13-Apr-2019 02:51:20 UTC] PHP Stack trace:
+[13-Apr-2019 02:51:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php:0
+[13-Apr-2019 02:52:20 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php on line 14
+[13-Apr-2019 02:52:20 UTC] PHP Stack trace:
+[13-Apr-2019 02:52:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php:0
+[13-Apr-2019 02:56:36 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php on line 15
+[13-Apr-2019 02:56:36 UTC] PHP Stack trace:
+[13-Apr-2019 02:56:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php:0
+[13-Apr-2019 02:56:47 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php on line 15
+[13-Apr-2019 02:56:47 UTC] PHP Stack trace:
+[13-Apr-2019 02:56:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php:0
+[13-Apr-2019 02:57:34 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php on line 15
+[13-Apr-2019 02:57:34 UTC] PHP Stack trace:
+[13-Apr-2019 02:57:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php:0
+[13-Apr-2019 03:01:35 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php on line 15
+[13-Apr-2019 03:01:35 UTC] PHP Stack trace:
+[13-Apr-2019 03:01:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php:0
+[14-Apr-2019 01:35:17 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php on line 15
+[14-Apr-2019 01:35:17 UTC] PHP Stack trace:
+[14-Apr-2019 01:35:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php:0

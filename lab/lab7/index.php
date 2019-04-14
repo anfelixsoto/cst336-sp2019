@@ -1,15 +1,16 @@
 <?php
     session_start();
-
-    if (!isset($_SESSION['email'])){
-      header("Location: login.html");
+    
+    if(!isset($_SESSION['email'])){
+        header("Location:login.html");
     }
 ?>
 
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Otter Mart Product Management</title>
+        <title>OtterMart Dashboard Management</title>
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
@@ -17,240 +18,229 @@
     	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
         
         <style>
-            body {
-                margin-top: 50px;
-                margin: 70px;
-            }footer{
-                text-align:center;
+            .newBttn{
+                border-radius:5px;
+                background-color:blue;
+                color: white;
+                border: none;
+                padding: 10px 24px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 12px;
             }
         </style>
     </head>
     <body>
-            <h1>
-                Otter Mart Product Management
-                <button id="refresh" class="btn btn-light">Refresh</button>
-                <button id="logout" class="btn btn-success">Logout</button>
-            </h1>
-            
-            <div>
-                Catergory:
-                <select name="category" id="categories">
-                    <option value=" ">Select One</option>
-                </select>
-                <button id="searchForm" class="btn btn-success">Search</button>
-                <button id="addButton" class="btn btn-primary">Add</button>
-                <br>
-                
-                <div id="message"></div>
-                <br>
-                
-                <div id="results"></div>
-                
-            </div>
-            
-            <div class="modal fade" id="addingProducts" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">New Product</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                 <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div id="newDetails">
-                                Catergory:
-                                <select name="category" id="categories">
-                                    <option value=" ">Select One</option>
-                                    <option value="5">Books</option>
-                                    <option value="4">Computers</option>
-                                    <option value="1">Electronics</option>
-                                    <option value="7">Movies</option>
-                                    <option value="3">Sports</option>
-                                    <option value="6">Toys</option>
-                                    <option value="2">Video Games</option>
-                                </select><br><br>
-                                Product Name: <input type="text" id="nProductName" required></input><br><br>
-                                Description: <input  type="text" id="nProductDes" required></input><br><br>
-                                Picture Link: <input type="text" id="nProductPic" required></input><br><br>
-                                Price: <input type="text" id="nProductPrice" required></input>
-                            </div>
-                        </div>
-                        <div class="modal-footer" id="modalFooter">
-                            <button type="button" id="saveProduct" class="btn btn-success">Save</button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
         
-            <div class="modal fade" id="productHistoryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Product Detail</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                 <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div id="productDetails"></div>
-                        </div>
-                        <div class="modal-footer" id="productModal">
-                            <button type="button" id="editBttn" class="btn btn-light">Edit</button>
-                            <button type="button" id="deleteBttn" class="btn btn-danger">Delete</button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
+        <h1>
+            Otter Mart Product Management<br>
+            <button id="addBttn" class="btn btn-primary">Add Product</button>
+            <button id="logout" class="btn btn-success">Logout</button>
+        </h1>
+        <div id="list"></div>
+        <div id="messages"></div>
+            
+        <table id="results">
+            
+            <th>Product Id</th>
+            <th>Product Name</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </table>
+        
+        <div class="modal fade" id="productHistoryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitle">Product Details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                             <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="productDetails"></div>
+                    </div>
+                    <div class="modal-footer" id="productFooter">
+                        
                     </div>
                 </div>
             </div>
+        </div>
+        
+        
+    </body>
+    
+    <footer>
+        <hr> CST 336. 2019&copy; Felix <br />
+        <strong>Disclaimer:</strong> The information in this webpage is fictitous. <br /> It is used for academic purpose only.
+        <br />
+        <img src="img/csumb.png" alt="CSUMB Logo" />
+    </footer>
+    
+    <script>
+    /* global $ */
+        $(document).ready(function(){
+           $.ajax({
+              type:"GET",
+              url:"api/getProduct.php",
+              dataType: "json",
+              success:function(data,status){
+                  $("#list").html("<h3>List of Products:</h3>");
+                  data.forEach(function(key){
+                    $("#results").append("<tr> " +
+                    "<td>" + key['productId'] + "</td>" +
+                    "<td><a href='#' class='historyLink' id='" + key['productId'] + "'>" + key['productName'] + "</a><br>" +
+                    "<td><button class='editBttn' id='" + key['productId'] + "'>Edit</button>" +
+                    "<td><button class='deleteBttn' id='" + key['productId'] + "'>Delete</button>" +
+                    "</tr>"); 
+                  });
+              }
+           });
+           
+           $("#addBttn").on('click',function(){
+               $("#productHistoryModal").modal("show");
+               $.ajax({
+                  type:"GET",
+                  url:"api/randomProduct.php",
+                  dataType:"json",
+                  success:function(data){
+                    $("#productDetails").html("");
+                    $("#productFooter").html("");
+                    $("#productDetails").append("<span id='productImage'><img src='" + data.productImage + "' width='200'/></span><br><br>");
+                    $("#productDetails").append("Product Name: <input type='text' id='productName' value='" + data.productName + "'</input><br><br>");
+                    $("#productDetails").append("Product Image URL: <input type='text' id='pictureUrl' value='" + data.productImage + "'</input><br>");
+                    $("#productDetails").append("Product Description: <textarea rows='4' id='productDes' cols='50' >" + data.productDescription +"</textarea><br>");
+                    $("#productDetails").append("Prouct Price: <input type='text' id='productPrice' value='" + data.Price + "'</input><br><br>");
+                    $("#productDetails").append("Catergory: <input type='text' id='catId' size='1' value='" + data.catId + "'</input>");
+                    $("#productFooter").append("<button type='button' class='newBttn' id='" + data.productId + "'>Save</button>");
+                    $("#productFooter").append("<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>");
+                  }
+               });
+            });
             
-            <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Edit Product Detail</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                        <div id="editDetails"></div>
-                        </div>
-                        <div class="modal-footer" id="addModalFooter">
-                            <button type="button" class="bttn btn-success">Save</button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <footer>
-                <hr> CST 336. 2019&copy; Felix <br />
-                <strong>Disclaimer:</strong> The information in this webpage is fictitous. <br /> It is used for academic purpose only.
-                <br />
-                <img src="img/csumb.png" alt="CSUMB Logo" />
-            </footer>
-
-        <script>
-        /* global $ */
-            $(document).ready(function(){
+            $(document).on('click','.newBttn',function(){
+               $.ajax({
+                  type:"POST",
+                  url:"api/addProduct.php",
+                  dataType:"json",
+                  data:{
+                      "productId" : $(this).attr("id"),
+                      "productName" : $("#productName").val(),
+                      "productImage" : $("#pictureUrl").val(),
+                      "productDescription" : $("#productDes").val(),
+                      "price" : $("#productPrice").val(),
+                      "catId" : $("#catId").val()
+                  },
+               });
+            });
+           
+            $(document).on('click','.historyLink',function(){
+                $('#productHistoryModal').modal("show");
                 $.ajax({
-                    type: "GET",
-                    url: "api/getCategories.php",
-                    dataType: "json",
-                    success: function(data, status) {
-                        data.forEach(function(key) {
-                            $("#categories").append("<option value=" + key["catId"] + ">" + key["catName"] + "</option>");
-                        });
-                    }
-                });
-                
-                $("#refresh").on("click",function(){
-                    $.ajax({
-                        type: "GET",
-                        url: "api/getProduct.php",
-                        dataType: "json",
-                        success: function(data, status) {
-                            $("#results").html("<h3>List of Products:</h3>");
-                            data.forEach(function(key) {
-                                $("#results").append(key['productId'] + "." + " ");
-                                $("#results").append("<a href='#' class='historyLink' id='" + key['productId'] + "'>" + key['productName'] + "</a><br>");
+                    type:"GET",
+                    url:"api/getProductHistory.php",
+                    dataType:"json",
+                    data: {"productId":$(this).attr("id")},
+                    success:function(data,status){
+                        if(data.length != 0){
+                            $("#productDetails").html(""); //clears content
+                            $("#productTitle").html(" ");
+                            $("#productFooter").html(" ");
+                            $("#productDetails").append(data[0]['productName'] + "<br />");
+                            $("#productDetails").append("<img src='" + data[0]['productImage'] + "' width='200'/> <br />");
+                            $("#productFooter").append("<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>");
+                            data.forEach(function(key){
+                                $("#productDetails").append("Description: " + key['productDescription'] + "<br />");
+                                $("#productDetails").append("Unit Price: $" + key['price'] + "<br />");
                             });
                         }
-                    }); 
-                });
-                
-                $("#searchForm").on("click", function(){
-                    $.ajax({
-                        type: "GET",
-                        url: "api/getSearchResults.php",
-                        dataType: "json",
-                        data: {
-                            "category": $("[name=category]").val()
-                        },
-                        success: function(data, status) {
-                            if($("[name=category").val() >= 1){
-                                $("#results").html("<h3>List of Products:</h3>");
-                                data.forEach(function(key) {
-                                    $("#results").append(key['productId'] + "." + " ");
-                                    $("#results").append("<a href='#' class='historyLink' id='" + key['productId'] + "'>" + key['productName'] + "</a><br>");
-                                    $("#message").hide();
-                                });
-                            } else {
-                                $("#message").append("Please select a category from the list!").css("color","red");
-                            }
-                        }
-                    });
-                });
-                
-                $("#addButton").on("click",function(){
-                   //$("#addingProducts").modal("show");
-                   $.ajax({
-                       type: "POST",
-                       url:"api/addProduct.php",
-                       dataType: "json"
-                   })
-                });
-                
-                $.ajax({
-                    type: "GET",
-                    url: "api/getProduct.php",
-                    dataType: "json",
-                    success: function(data, status) {
-                        $("#results").html("<h3>List of Products:</h3>");
-                        data.forEach(function(key) {
-                            $("#results").append(key['productId'] + "." + " ");
-                            $("#results").append("<a href='#' class='historyLink' id='" + key['productId'] + "'>" + key['productName'] + "</a><br>");
-                        });
                     }
                 });
-                $("#saveProduct").on("click",function(){
-                    console.log( $("[name=category]").val());
-                    console.log($("#nProductName").val());
-                    console.log($("#nProductDes").val());
-                    console.log($("#nProductPic").val());
-                    console.log($("#nProductPrice").val());
-                    $.ajax({
-                        type: "POST",
-                        url: "api/addProduct.php",
-                        dataType: "json",
-                        data: {
-                            "catId": $("[name=category]").val(),
-                            "productName": $("#nProductName").val(),
-                            "productDescription": $("#nProductDes").val(),
-                            "pictureImage": $("#nProductPic").val(),
-                            "price": $("#nProductPrice").val()
-                        }
-                    });
-                });
                 
-                $(document).on('click', '.historyLink', function(){
-                    $('#productHistoryModal').modal("show");
-                    $.ajax({
-                        type: "GET",
-                        url: "api/getProductHistory.php",
-                        dataType: "json",
-                        data: {"productId" : $(this).attr("id")},
-                        success: function(data, status) {
-                            if (data.length != 0) { // Checks if the API returned a non-empty list
-                                $("#productDetails").html(""); //clears content
-                                $("#productDetails").append(data[0]['productName'] + "<br />");
-                                $("#productDetails").append("<img src='" + data[0]['productImage'] + "' width='200'/> <br />");
-                                data.forEach(function(key) {
-                                    $("#productDetails").append("Description: " + key['productDescription'] + "<br />");
-                                    $("#productDetails").append("Unit Price: $" + key['price'] + "<br />");
-                                });
-                            }
+            });
+           
+            $(document).on('click','.editBttn',function(){
+                $('#productHistoryModal').modal("show");
+                $.ajax({
+                   type:"GET",
+                   url:"api/getProductHistory.php",
+                   dataType:"json",
+                   data: {"productId":$(this).attr("id")},
+                   success:function(data,status){
+                       if(data.length != 0){
+                            $("#productDetails").html("");
+                            $("#productFooter").html("");
+                            $("#productDetails").append("<img src='" + data[0]['productImage'] + "' width='200'/> <br><br>");
+                            $("#productDetails").append("Product Id:" + " " + data[0]['productId'] + "<br>");
+                            $("#productDetails").append("Product Name: <input type='text' id='editName' value='" + data[0]['productName'] + "'</input><br><br>");
+                            $("#productDetails").append("Product Image URL: <input type='text' id='editPicture' value='" + data[0]['productImage'] + "'</input><br>");                           
+                            data.forEach(function(key){
+                               $("#productDetails").append("Product Description: <textarea rows='4' id='editDes' cols='50' >" + key['productDescription'] +"</textarea><br>");
+                               $("#productDetails").append("Prouct Price: <input type='text' id='editPrice' value='" + key['price'] + "'</input>");
+                               $("#productFooter").append("<button type='button' class='saveBttn' id='" + key['productId'] + "'>Save</button>");
+                               $("#productFooter").append("<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>");
+                            });
                         }
-                    });
-                });
-                
-                $("#logout").on("click", function() {
-                    window.location = "logout.php";
+                   }
                 });
             });
             
-        </script>
-    </body>
+            $(document).on('click','.saveBttn',function(){
+                $.ajax({
+                   type:"POST",
+                   url:"api/editProduct.php",
+                   dataType:"json",
+                   data: {
+                        "productId" : $(this).attr("id"),
+                        "productName": $("#editName").val(),
+                        "productImage": $("#editPicture").val(),
+                        "productDescription": $("#editDes").val(),
+                        "price": $("editPrice").val()
+                   },
+                });
+            });
+            
+            $(document).on('click','.deleteBttn',function(){
+                $('#productHistoryModal').modal("show");
+                $.ajax({
+                   type:"GET",
+                   url:"api/getProductHistory.php",
+                   dataType:"json",
+                   data: {"productId":$(this).attr("id")},
+                   success:function(data,status){
+                       if(data.length != 0){
+                            $("#productDetails").html("");
+                            $("#productFooter").html("");
+                            $("#productDetails").append("Are you sure you want to delete <strong>" + data[0]['productName'] + "</strong>?<br>");                          
+                            data.forEach(function(key){
+                               $("#productFooter").append("<button type='button' class='confirmBttn' id='" + key['productId'] + "'>Confirm</button>");
+                               $("#productFooter").append("<button type='button' class='btn btn-secondary' data-dismiss='modal'>Cancel</button>");
+                            });
+                        }
+                   }
+                });
+            });
+            
+            $(document).on('click','.confirmBttn',function(){
+                $("#productHistoryModal").modal("hide");
+                console.log($(this).attr("id"));
+                $.ajax({
+                   type:"GET",
+                   url:"api/deleteProduct.php",
+                   dataType:"json",
+                   data: {"productId":$(this).attr("id")},
+                   success:function(data,status){
+                       
+                       $("#message").html("");
+                       $("#message").html("Product has been deleted").css("color","green");
+                   }
+                });
+            });
+            
+            $("#logout").on("click", function() {
+                window.location = "logout.php";
+            });
+        });
+    </script>
 </html>

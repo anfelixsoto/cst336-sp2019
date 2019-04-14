@@ -4,14 +4,13 @@
     $password = "";
     $dbname = "ottermart";
     
-    $conn = new mysqli($servername,$username,$password,$dbname);
-    
     if($conn->connect_error){
         die("connection failed: "  . $conn->connect_error);
     }
     
-    $sql = "INSERT INTO om_product (productId, productName, productDescription, productImage, price, catId)
-    VALUES ('50','test','dasds','','0.00','1')";
+    $productId = $_POST['productId'];
+    echo $productId;
+    $sql = "DELETE FROM `om_product` WHERE productId = :pId";
     
     if($conn->query($sql) === TRUE){
         echo "New record created successfully.";
@@ -19,6 +18,5 @@
         echo "Error: " .$sql . "<br>" . $conn->error;
     }
 
-    $conn->close();
-
+    $conn->close()
 ?>

@@ -1,6 +1,6 @@
 <?php
     include '../connect.php';
-    $conn = getDatabaseConnection("ottermart2");
+    $conn = getDatabaseConnection("ottermart");
     
     $productId = $_GET['productId'];
     $sql = "SELECT * FROM om_product WHERE productId = :pId";

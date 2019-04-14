@@ -9,7 +9,7 @@ function getDatabaseConnection(){
     }
     
     $host = $hasConnUrl ? $connParts['host']: getenv('IP');
-    $dbname = $hasConnUrl ? ltrim($connParts['path'],'/') : 'ottermart2';
+    $dbname = $hasConnUrl ? ltrim($connParts['path'],'/') : 'ottermart';
     $username = $hasConnUrl ? $connParts['user'] : getenv('C9_USER');
     $password = $hasConnUrl ? $connParts['pass'] : '';
     
