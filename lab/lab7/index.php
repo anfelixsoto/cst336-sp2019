@@ -197,7 +197,7 @@
                         "productName": $("#editName").val(),
                         "productImage": $("#editPicture").val(),
                         "productDescription": $("#editDes").val(),
-                        "price": $("editPrice").val()
+                        "price": $("#editPrice").val()
                    },
                 });
             });
