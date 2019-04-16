@@ -120,8 +120,9 @@
             });
             
             $(document).on('click','.newBttn',function(){
+                $('#productHistoryModal').modal("hide");
                $.ajax({
-                  type:"POST",
+                  method:"POST",
                   url:"api/addProduct.php",
                   dataType:"json",
                   data:{
@@ -224,14 +225,12 @@
             
             $(document).on('click','.confirmBttn',function(){
                 $("#productHistoryModal").modal("hide");
-                console.log($(this).attr("id"));
                 $.ajax({
-                   type:"GET",
+                   method:"POST",
                    url:"api/deleteProduct.php",
                    dataType:"json",
                    data: {"productId":$(this).attr("id")},
                    success:function(data,status){
-                       
                        $("#message").html("");
                        $("#message").html("Product has been deleted").css("color","green");
                    }

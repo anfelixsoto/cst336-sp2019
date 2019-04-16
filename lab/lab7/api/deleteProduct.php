@@ -1,22 +1,14 @@
 <?php
-    $servername = "localhost";
-    $username = "antoniofelix118";
-    $password = "";
-    $dbname = "ottermart";
+    include '../connect.php';
+    $conn = getDatabaseConnection("ottermart");
     
-    if($conn->connect_error){
-        die("connection failed: "  . $conn->connect_error);
-    }
+    $namedParameters = array();
+    $namedParameters[':productId'] = $_POST['productId'];
     
-    $productId = $_POST['productId'];
-    echo $productId;
-    $sql = "DELETE FROM `om_product` WHERE productId = :pId";
+    $sql = "DELETE FROM om_product WHERE productId = :productId";
     
-    if($conn->query($sql) === TRUE){
-        echo "New record created successfully.";
-    } else {
-        echo "Error: " .$sql . "<br>" . $conn->error;
-    }
-
-    $conn->close()
+    $stmt = $conn->prepare($sql);
+    $stmt->execute($namedParameters);
+    $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    echo json_encode($records);
 ?>

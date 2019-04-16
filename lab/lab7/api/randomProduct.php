@@ -50,7 +50,7 @@ $products ["productId"] = "55";
 $products ["productName"] = "Surface Book 2";
 $products ["productDescription"] = "Powerhouse performance. The most powerful Surface laptop, Surface Book 2 is built for professional-grade software and the latest games.* Up to 17 hours of battery life[1] and high-resolution touchscreen let you work your way anywhere.";
 $products ["productImage"] = "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1FU5k?ver=e2c0&q=90&m=6&h=705&w=1253&b=%23FFF0F0F0&o=f&p=140&aim=true";
-$products ["Price"] = "1,149.00";
+$products ["Price"] = "1149.00";
 $products ["catId"] = "5";
 
 array_push($productArray,$products);

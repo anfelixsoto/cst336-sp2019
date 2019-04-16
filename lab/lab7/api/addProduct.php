@@ -1,24 +1,21 @@
 <?php
-    $servername = "localhost";
-    $username = "antoniofelix118";
-    $password = "";
-    $dbname = "ottermart";
     
-    $conn = new mysqli($servername,$username,$password,$dbname);
+    include '../connect.php';
+    $conn = getDatabaseConnection("ottermart");
     
-    if($conn->connect_error){
-        die("connection failed: "  . $conn->connect_error);
-    }
+    $namedParameters = array();
+    $namedParameters[':productId'] = $_POST['productId'];
+    $namedParameters[':productName'] = $_POST['productName'];
+    $namedParameters[':productDescription'] = $_POST['productDescription'];
+    $namedParameters[':productImage'] = $_POST['productImage'];
+    $namedParameters[':price'] = $_POST['price'];
+    $namedParameters[':catId'] = $_POST['catId'];
     
     $sql = "INSERT INTO om_product (productId, productName, productDescription, productImage, price, catId)
-    VALUES ('50','test','dasds','','0.00','1')";
+    VALUES (:productId,:productName, :productDescription, :productImage, :price, :catId)";
     
-    if($conn->query($sql) === TRUE){
-        echo "New record created successfully.";
-    } else {
-        echo "Error: " .$sql . "<br>" . $conn->error;
-    }
-
-    $conn->close();
-
+    $stmt = $conn->prepare($sql);
+    $stmt->execute($namedParameters);
+    $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    echo json_encode($records);
 ?>

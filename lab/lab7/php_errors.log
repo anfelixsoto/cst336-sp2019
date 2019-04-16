@@ -203,3 +203,134 @@ Stack trace:
 [14-Apr-2019 01:35:17 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php on line 15
 [14-Apr-2019 01:35:17 UTC] PHP Stack trace:
 [14-Apr-2019 01:35:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php:0
+[15-Apr-2019 22:49:20 UTC] PHP Parse error:  syntax error, unexpected '$namedParameters' (T_VARIABLE) in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 11
+[15-Apr-2019 22:50:13 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:18
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 18
+[15-Apr-2019 22:50:31 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:18
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 18
+[15-Apr-2019 22:51:53 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(19): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 19
+[15-Apr-2019 22:59:36 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php:12
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php(12): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php on line 12
+[15-Apr-2019 23:00:10 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php:12
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php(12): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php on line 12
+[15-Apr-2019 23:00:47 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php:12
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php(12): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php on line 12
+[15-Apr-2019 23:02:33 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php:12
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php(12): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php on line 12
+[15-Apr-2019 23:03:42 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php:12
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php(12): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php on line 12
+[15-Apr-2019 23:03:44 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php:12
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php(12): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php on line 12
+[15-Apr-2019 23:04:23 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(19): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 19
+[15-Apr-2019 23:04:27 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'productName' cannot be null' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:18
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 18
+[15-Apr-2019 23:04:47 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php:12
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php(12): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php on line 12
+[15-Apr-2019 23:05:39 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(19): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 19
+[15-Apr-2019 23:06:05 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(19): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 19
+[15-Apr-2019 23:06:08 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(19): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 19
+[15-Apr-2019 23:06:20 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php:12
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php(12): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php on line 12
+[15-Apr-2019 23:06:25 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php:12
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php(12): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php on line 12
+[15-Apr-2019 23:06:28 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php:12
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php(12): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php on line 12
+[15-Apr-2019 23:16:43 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(19): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 19
+[15-Apr-2019 23:21:52 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(19): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 19
+[15-Apr-2019 23:23:43 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(19): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 19
+[15-Apr-2019 23:24:25 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php:12
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php(12): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php on line 12
+[16-Apr-2019 00:03:00 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(19): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 19
+[16-Apr-2019 00:03:13 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php:12
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php(12): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php on line 12
+[16-Apr-2019 00:03:20 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php:12
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php(12): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php on line 12
+[16-Apr-2019 00:03:22 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php:12
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php(12): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php on line 12
