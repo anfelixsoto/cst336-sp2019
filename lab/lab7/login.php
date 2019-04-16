@@ -1,4 +1,7 @@
 <?php
+
+  include '../connect.php';
+  
   session_start();
 
   $httpMethod = strtoupper($_SERVER['REQUEST_METHOD']);
