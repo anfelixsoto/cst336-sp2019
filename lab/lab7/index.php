@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>OtterMart Dashboard Management</title>
+        <title>OtterMart Dashboard Admin Management</title>
         <link href="css/styles.css" rel="stylesheet" type="text/css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -28,13 +28,22 @@
                 text-decoration: none;
                 display: inline-block;
                 font-size: 12px;
+            }body {
+                margin-top: 50px;
+                margin: 70px;
+            }footer{
+                text-align:center;
+            }table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                text-align: center;
             }
         </style>
     </head>
     <body>
         
         <h1>
-            Otter Mart Product Management<br>
+            Otter Mart Product Admin Management<br>
             <button id="addBttn" class="btn btn-primary">Add Product</button>
             <button id="logout" class="btn btn-success">Logout</button>
         </h1>
@@ -111,7 +120,7 @@
                     $("#productDetails").append("Product Name: <input type='text' id='productName' value='" + data.productName + "'</input><br><br>");
                     $("#productDetails").append("Product Image URL: <input type='text' id='pictureUrl' value='" + data.productImage + "'</input><br>");
                     $("#productDetails").append("Product Description: <textarea rows='4' id='productDes' cols='50' >" + data.productDescription +"</textarea><br>");
-                    $("#productDetails").append("Prouct Price: <input type='text' id='productPrice' value='" + data.Price + "'</input><br><br>");
+                    $("#productDetails").append("Prouct Price: <input type='text'  style='width: 55px' id='productPrice' value='" + data.Price + "'</input><br><br>");
                     $("#productDetails").append("Catergory: <input type='text' id='catId' size='1' value='" + data.catId + "'</input>");
                     $("#productFooter").append("<button type='button' class='newBttn' id='" + data.productId + "'>Save</button>");
                     $("#productFooter").append("<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>");
@@ -178,7 +187,7 @@
                             $("#productDetails").append("Product Image URL: <input type='text' id='editPicture' value='" + data[0]['productImage'] + "'</input><br>");                           
                             data.forEach(function(key){
                                $("#productDetails").append("Product Description: <textarea rows='4' id='editDes' cols='50' >" + key['productDescription'] +"</textarea><br>");
-                               $("#productDetails").append("Prouct Price: <input type='text' id='editPrice' value='" + key['price'] + "'</input>");
+                               $("#productDetails").append("Prouct Price: <input type='text' style='width: 55px' id='editPrice' value='" + key['price'] + "'</input>");
                                $("#productFooter").append("<button type='button' class='saveBttn' id='" + key['productId'] + "'>Save</button>");
                                $("#productFooter").append("<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>");
                             });
@@ -188,6 +197,7 @@
             });
             
             $(document).on('click','.saveBttn',function(){
+                $('#productHistoryModal').modal("hide");
                 $.ajax({
                    type:"POST",
                    url:"api/editProduct.php",
