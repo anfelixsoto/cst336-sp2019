@@ -3,7 +3,7 @@
   session_start();
 
   // Get Data from DB
-  $conn = getDatabaseCOnnection("ottermart");
+  $conn = getDatabaseConnection("ottermart");
   $namedParameters = array();
   
   $namedParameters[":email"] = $_GET['email'];
