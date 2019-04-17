@@ -53,11 +53,12 @@
                     </div>
 
                     <button id="loginButton" type="button" class="btn btn-block btn-success">Login</button>
+                    <br>
                 </form>
             </div>
             <div class="card-footer p-4">
-                <div id="message" class="alert alert-danger open-hidden" role="alert">
-                </div>
+                <div id="message" class="alert alert-danger open-hidden" role="alert"></div>
+                <nav><a href="searchIndex.php">Main Page</a>
             </div>
         </div>
     </main>
@@ -81,7 +82,7 @@
                 success: function(data, status) {
                     console.log(data);
                     if (data.isAuthenticated) {
-                        window.location = "index.php"
+                        window.location = "index.php";
                     }
                     else {
                         $("#message").html("Incorrect email or password");
@@ -92,7 +93,8 @@
                     //console.log(status);
                 }
             });
-        })
+            
+        });
     </script>
 </body>
 
