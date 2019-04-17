@@ -53,7 +53,7 @@
             
         <table id="results">
             
-            <th>Product Id</th>
+            <th width='100px'>Product Id</th>
             <th>Product Name</th>
             <th>Edit</th>
             <th>Delete</th>

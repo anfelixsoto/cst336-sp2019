@@ -58,7 +58,8 @@
             </div>
             <div class="card-footer p-4">
                 <div id="message" class="alert alert-danger open-hidden" role="alert"></div>
-                <nav><a href="searchIndex.php">Main Page</a>
+                <button id="mainPage" class="btn btn-block btn-warning">Main Page</button>
+                <!--<a href="searchIndex.php">Main Page</a>-->
             </div>
         </div>
     </main>
@@ -70,6 +71,11 @@
 
     <script>
         /* global $ */
+        $(document).ready(function(){
+            $("#mainPage").on('click',function(){
+               window.location = "searchIndex.php";
+           });
+        });
         $("#loginButton").on('click', function(e) {
             $.ajax({
                 type: "get",
@@ -93,7 +99,6 @@
                     //console.log(status);
                 }
             });
-            
         });
     </script>
 </body>
