@@ -28,9 +28,9 @@ $i++;
 /* Authentication type */
 $cfg['Servers'][$i]['auth_type'] = 'config';
 /* Server parameters */
-$cfg['Servers'][$i]['host'] = 'jlg7sfncbhyvga14.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';
-$cfg['Servers'][$i]['user'] = "kgej2abje0hvtla6";
-$cfg['Servers'][$i]['password'] = "pkyzi3vwrp3psysr";
+$cfg['Servers'][$i]['host'] = 'us-cdbr-iron-east-02.cleardb.net';
+$cfg['Servers'][$i]['user'] = "bc73b292d991e9";
+$cfg['Servers'][$i]['password'] = "8094f107";
 $cfg['Servers'][$i]['compress'] = false;
 $cfg['Servers'][$i]['AllowNoPassword'] = false;
 
