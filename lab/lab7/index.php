@@ -46,6 +46,7 @@
             Otter Mart Product Admin Management<br>
             <button id="addBttn" class="btn btn-primary">Add Product</button>
             <button id="logout" class="btn btn-success">Logout</button>
+            <button id="mainPage" class="btn btn-warning">Main  Page</button>
         </h1>
         <div id="list"></div>
         <div id="messages"></div>
@@ -105,6 +106,10 @@
                     "</tr>"); 
                   });
               }
+           });
+           
+           $("#mainPage").on('click',function(){
+               window.location = "searchIndex.php";
            });
            
            $("#addBttn").on('click',function(){
