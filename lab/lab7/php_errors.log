@@ -404,3 +404,81 @@ Stack trace:
 #0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/editProduct.php(21): PDOStatement->fetchAll(2)
 #1 {main}
   thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/editProduct.php on line 21
+[17-Apr-2019 01:26:50 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/connect.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/connect.php(16): PDO->__construct('mysql:host=0.0....', '', '')
+#1 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/getProduct.php(4): getDatabaseConnection('ottermart')
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/connect.php on line 16
+[17-Apr-2019 01:27:30 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/connect.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/connect.php(16): PDO->__construct('mysql:host=0.0....', '', '')
+#1 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/getProduct.php(4): getDatabaseConnection('ottermart')
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/connect.php on line 16
+[17-Apr-2019 01:28:20 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/connect.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/connect.php(16): PDO->__construct('mysql:host=0.0....', '', '')
+#1 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/getProduct.php(4): getDatabaseConnection('ottermart')
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/connect.php on line 16
+[17-Apr-2019 01:42:28 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/connect.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/connect.php(16): PDO->__construct('mysql:host=0.0....', '', '')
+#1 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/getProduct.php(4): getDatabaseConnection('ottermart')
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/connect.php on line 16
+[17-Apr-2019 01:43:01 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/connect.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/connect.php(16): PDO->__construct('mysql:host=0.0....', '', '')
+#1 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/getProduct.php(4): getDatabaseConnection('ottermart')
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/connect.php on line 16
+[17-Apr-2019 01:43:16 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/connect.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/connect.php(16): PDO->__construct('mysql:host=0.0....', '', '')
+#1 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/getProduct.php(4): getDatabaseConnection('ottermart')
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/connect.php on line 16
+[17-Apr-2019 08:18:51 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(19): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 19
+[17-Apr-2019 08:19:04 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php:12
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php(12): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php on line 12
+[17-Apr-2019 21:32:21 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php(19): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/addProduct.php on line 19
+[17-Apr-2019 21:32:35 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php:12
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php(12): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/deleteProduct.php on line 12
+[17-Apr-2019 21:51:42 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/connect.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/connect.php(16): PDO->__construct('mysql:host=0.0....', '', '')
+#1 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/getProduct.php(4): getDatabaseConnection('ottermart')
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/connect.php on line 16
+[17-Apr-2019 21:52:09 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/connect.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/connect.php(16): PDO->__construct('mysql:host=0.0....', '', '')
+#1 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/getProduct.php(4): getDatabaseConnection('ottermart')
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/connect.php on line 16
+[17-Apr-2019 21:55:31 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/editProduct.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/editProduct.php(21): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/editProduct.php on line 21
+[17-Apr-2019 21:55:46 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/editProduct.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/editProduct.php(21): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/editProduct.php on line 21
