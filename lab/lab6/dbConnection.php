@@ -1,7 +1,7 @@
 <?php
 
 function getDatabaseConnection(){
-    $connUrl = getenv('JAWSDB_MARIA_URL');
+    $connUrl = getenv('JAWSDB_MARIA_SILVER_URL');
     $hasConnUrl = !empty($connUrl);
     $connParts = null;
     if ($hasConnUrl) {
