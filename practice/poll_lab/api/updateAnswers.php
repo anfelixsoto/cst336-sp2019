@@ -2,7 +2,7 @@
 
     include '../connect.php';
     $conn = getDatabaseConnection("poll");
-    print_r ($_POST);
+    // print_r ($_POST);
     $np = array();
     $np[':pollId'] = $_POST['pollId'];
     $np[':option'] = $_POST['option'];
