@@ -502,3 +502,8 @@ Stack trace:
 #0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/editProduct.php(21): PDOStatement->fetchAll(2)
 #1 {main}
   thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/editProduct.php on line 21
+[24-Apr-2019 21:50:04 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/editProduct.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/editProduct.php(21): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab7/api/editProduct.php on line 21
