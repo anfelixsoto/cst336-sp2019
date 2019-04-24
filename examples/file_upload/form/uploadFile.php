@@ -1,7 +1,14 @@
 <?php 
+require __DIR__ . '/../../../vendor/autoload.php';
+
+$log = new Monolog\Logger('testing');
+$log->pushHandler(new Monolog\Handler\StreamHandler(__DIR__ . '/../../../app.log', Monolog\Logger::INFO));
+$log->info('I am inside the upload file form stuff');
+
 // http://php.net/manual/en/features.file-upload.multiple.php
 
-
+if (isset($_POST['uploadForm'])) {
+    
     $file_ary = reArrayFiles($_FILES['fileName']);
 
     foreach ($file_ary as $file) {
@@ -19,6 +26,7 @@
         // print 'File Size: ' . $file['size'];
     }
     
+} //endIf form submission
 
 function reArrayFiles(&$file_post) {
     $file_ary = array();
@@ -34,3 +42,4 @@ function reArrayFiles(&$file_post) {
     return $file_ary;
 }
 ?>
+

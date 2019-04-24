@@ -10,3 +10,9 @@ Stack trace:
 #1 /home/ubuntu/workspace/cst336-sp2019/examples/Wk08/ottermart.php(11): onGet()
 #2 {main}
   thrown in /home/ubuntu/workspace/cst336-sp2019/examples/Wk08/ottermart.php on line 46
+[24-Apr-2019 22:39:29 UTC] PHP Fatal error:  Class 'Google_Client' not found in /home/ubuntu/workspace/cst336-sp2019/examples/Google/verify.php on line 19
+[24-Apr-2019 22:39:29 UTC] PHP Stack trace:
+[24-Apr-2019 22:39:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/examples/Google/verify.php:0
+[24-Apr-2019 22:39:31 UTC] PHP Fatal error:  Class 'Google_Client' not found in /home/ubuntu/workspace/cst336-sp2019/examples/Google/verify.php on line 19
+[24-Apr-2019 22:39:31 UTC] PHP Stack trace:
+[24-Apr-2019 22:39:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/examples/Google/verify.php:0
