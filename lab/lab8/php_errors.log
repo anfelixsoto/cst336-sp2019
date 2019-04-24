@@ -17,3 +17,56 @@ Stack trace:
 #0 /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php(15): PDOStatement->fetchAll(2)
 #1 {main}
   thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php on line 15
+[22-Apr-2019 21:54:20 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'image_url' cannot be null' in /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php(14): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php on line 14
+[22-Apr-2019 21:55:02 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php(14): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php on line 14
+[22-Apr-2019 21:56:12 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'image_url' cannot be null' in /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php(14): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php on line 14
+[22-Apr-2019 21:57:16 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'image_url' cannot be null' in /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php(14): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php on line 14
+[22-Apr-2019 21:58:04 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'image_url' cannot be null' in /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php(15): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php on line 15
+[22-Apr-2019 21:59:45 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php(16): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php on line 16
+[22-Apr-2019 22:00:45 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php on line 15
+[22-Apr-2019 22:01:07 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php on line 15
+[22-Apr-2019 22:01:30 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php(16): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php on line 16
+[23-Apr-2019 19:08:01 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php(16): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/addFavorites.php on line 16
+[23-Apr-2019 19:12:31 UTC] PHP Fatal error:  Call to undefined method PDOStatement::excute() in /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/getLikes.php on line 9
+[23-Apr-2019 19:12:31 UTC] PHP Stack trace:
+[23-Apr-2019 19:12:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/lab/lab8/api/getLikes.php:0

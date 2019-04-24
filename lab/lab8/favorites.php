@@ -41,14 +41,7 @@
             dataType: "json",
             success:function(data,status){
                 data.forEach(function(key){
-                   $("#results").append("<td><img src='" + key['image_url'] + "' width='200'/><br>");
-                   if(key['favorite'] == 1){
-                       $("#results").append("<button type='button' class='favorite'  value='" + key['favorite'] + "'id='" + key['image_url'] +
-                       "'><img src=img/favorite-on.png width='24' height='24'></button></td>");
-                   }else {
-                       $("#results").append("<button type='button' class='favorite' value='" + key['favorite'] + "'id='" + key['image_url'] +
-                       "'><img src=img/favorite.png width='24' height='24'></button></td>"); 
-                   }
+                   $("#results").append("<td><img src='" + key['image_url'] + "' width='200' height='200'/><br>");
                 });
             }
        }); 

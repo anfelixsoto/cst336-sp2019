@@ -20,8 +20,9 @@
     </head>
     <body>
         <h1>Pixaby Image Search</h1>
-        Search: <input type="text" name="search"><button type="button" id="search" class="btn btn-primary">Search</button><span id="message"></span>
-        <button id='favoriteView' type='button' class='btn btn-warning'>Favorite Views</button><br></br>
+        Search: <input type="text" name="search"><button type="button" id="search" class="btn btn-primary">Search</button>
+        <button id='favoriteView' type='button' class='btn btn-warning'>Favorite Views</button><br>
+        <span id="message"></span><br></br>
         <table id="results">
             <th</th>
             <th></th>
@@ -31,15 +32,34 @@
     
     <script>
     /* global $ */
+        let myLikes = [];
+        
         $(document).ready(function(){
+            $.ajax({
+                type:"GET",
+                url:"api/getLikes.php",
+                 dataType: "json",
+                 success:function(data,status){
+                    data.forEach(function(key){
+                       for(var i; i < data.length;i++){
+                           myLikes[i] = key['image_id'];
+                       }
+                    });
+                 }
+            });
+            
+            for(var i; i < myLikes.length;i++){
+                console.log(myLikes[i]);
+            }
+            
             $("#search").on('click',function(){
-                var count = 0;
                 var api_key = '12230909-e4f375022b2664344da24938c';
-                var URL = "https://pixabay.com/api/?key="+api_key+"&q="+encodeURI($("[name=search").val());
+                var URL = "https://pixabay.com/api/?key="+api_key+"&q="+encodeURI($("[name=search]").val());
                 $("#message").html(" ").css("color","black");
                 $("#results").html(" ").css("color","black");
                 $.getJSON(URL,function(data){
                     if(parseInt(data.totalHits) > 0){
+                        $("#message").append("Theses are the results found for " + $("[name=search]").val()).css("color","blue");
                         $.each(data.hits,function(i,hit){
                             if(i % 4 == 0){
                                 $("#results").append("<tr>");
@@ -55,20 +75,18 @@
                     }
                 });
             });
+            
             $(document).on('click','.favorite',function(){
-               console.log($(this).attr("id"));
-               console.log($(this).attr("value"));
-               console.log($("[name=search").val());
-               $.ajax({
-                  type:"POST",
-                  url:"api/addFavorite.php",
-                  dataType: "json",
-                  data :{
-                      "search_name": $("[name=search").val(),
-                      "image_id": $(this).attr("id"),
-                      "search_name": $("[name=search]").val(),
-                  }
-               });
+                $.ajax({
+                    type:"POST",
+                    url:"api/addFavorites.php",
+                    dataType: "json",
+                    data :{
+                        "search_name": $("[name=search").val(),
+                        "image_id": $(this).attr("id"),
+                        "image_url": $(this).attr("value"),
+                    }
+                });
             });
             
             $("#favoriteView").on('click',function(){
