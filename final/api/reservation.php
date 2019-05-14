@@ -16,7 +16,7 @@
     if($records['appointment_id']){
         $isBooked = false;
     }else {
-        // $sql = "INSERT INTO `booked`(`appointment_id`, `email`, `name`) VALUES ('$appointment_id','$email','$name')";
+        $sql = "INSERT INTO `booked`(`appointment_id`, `email`, `name`) VALUES ('$appointment_id','$email','$name')";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $isBooked = true;
