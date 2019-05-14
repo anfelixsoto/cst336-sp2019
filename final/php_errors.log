@@ -1,0 +1,188 @@
+[13-May-2019 17:54:34 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'reservation'' in /home/ubuntu/workspace/cst336-sp2019/final/api/login.php:33
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/login.php(33): PDO->__construct('mysql:host=127....', 'antoniofelix118', '')
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/login.php on line 33
+[13-May-2019 17:54:35 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'reservation'' in /home/ubuntu/workspace/cst336-sp2019/final/api/login.php:33
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/login.php(33): PDO->__construct('mysql:host=127....', 'antoniofelix118', '')
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/login.php on line 33
+[13-May-2019 17:55:56 UTC] PHP Warning:  include(connect.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336-sp2019/final/api/login.php on line 2
+[13-May-2019 17:55:56 UTC] PHP Stack trace:
+[13-May-2019 17:55:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/final/api/login.php:0
+[13-May-2019 17:55:56 UTC] PHP Warning:  include(): Failed opening 'connect.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336-sp2019/final/api/login.php on line 2
+[13-May-2019 17:55:56 UTC] PHP Stack trace:
+[13-May-2019 17:55:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/final/api/login.php:0
+[13-May-2019 17:55:56 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/cst336-sp2019/final/api/login.php on line 6
+[13-May-2019 17:55:56 UTC] PHP Stack trace:
+[13-May-2019 17:55:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/final/api/login.php:0
+[13-May-2019 17:56:23 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'reservation'' in /home/ubuntu/workspace/cst336-sp2019/final/connect.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/connect.php(16): PDO->__construct('mysql:host=0.0....', 'antoniofelix118', '')
+#1 /home/ubuntu/workspace/cst336-sp2019/final/api/login.php(6): getDatabaseConnection('reservation')
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/connect.php on line 16
+[13-May-2019 20:24:05 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/final/api/addSingleAppointment.php:23
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/addSingleAppointment.php(23): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/addSingleAppointment.php on line 23
+[13-May-2019 22:38:09 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php:13
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php(13): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php on line 13
+[13-May-2019 22:38:50 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php:13
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php(13): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php on line 13
+[13-May-2019 22:41:08 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php:13
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php(13): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php on line 13
+[13-May-2019 22:48:16 UTC] PHP Warning:  json_encode() expects parameter 2 to be long, string given in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php on line 9
+[13-May-2019 22:48:16 UTC] PHP Stack trace:
+[13-May-2019 22:48:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php:0
+[13-May-2019 22:48:16 UTC] PHP   2. json_encode() /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php:9
+[13-May-2019 22:52:11 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php:29
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php(29): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php on line 29
+[13-May-2019 22:56:13 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php:28
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php(28): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php on line 28
+[13-May-2019 22:57:04 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php:23
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php(23): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php on line 23
+[13-May-2019 23:13:26 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'appointment_id'' in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php(21): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php on line 21
+[13-May-2019 23:14:12 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'appointment_id'' in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php(21): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php on line 21
+[13-May-2019 23:15:39 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'appointment_id'' in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php(21): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php on line 21
+[13-May-2019 23:16:36 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'appointment_id'' in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php(21): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php on line 21
+[13-May-2019 23:17:03 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'appointment_id'' in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php(21): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php on line 21
+[13-May-2019 23:17:08 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'appointment_id'' in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php(21): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php on line 21
+[13-May-2019 23:18:14 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'appointment_id'' in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php(21): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php on line 21
+[13-May-2019 23:19:28 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'appointment_id'' in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php(21): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php on line 21
+[13-May-2019 23:19:33 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'appointment_id'' in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php(21): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php on line 21
+[13-May-2019 23:53:19 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/final/api/addSingleAppointment.php:23
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/addSingleAppointment.php(23): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/addSingleAppointment.php on line 23
+[14-May-2019 00:23:52 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/final/api/addSingleAppointment.php:23
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/addSingleAppointment.php(23): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/addSingleAppointment.php on line 23
+[14-May-2019 00:24:28 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/final/api/addSingleAppointment.php:23
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/addSingleAppointment.php(23): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/addSingleAppointment.php on line 23
+[14-May-2019 00:34:05 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'appointment_id'' in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php(21): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php on line 21
+[14-May-2019 00:34:50 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'appointment_id'' in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php(21): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php on line 21
+[14-May-2019 00:36:32 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Reservation.appoitment' doesn't exist' in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php:32
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php on line 32
+[14-May-2019 00:47:52 UTC] PHP Warning:  json_encode() expects parameter 2 to be long, array given in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php on line 30
+[14-May-2019 00:47:52 UTC] PHP Stack trace:
+[14-May-2019 00:47:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php:0
+[14-May-2019 00:47:52 UTC] PHP   2. json_encode() /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php:30
+[14-May-2019 00:59:50 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM date,start_time,end_time FROM `appointment` WHERE id = '3'' at line 1' in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php:28
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php(28): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php on line 28
+[14-May-2019 01:00:07 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM date,start_time,end_time FROM `appointment` WHERE id = '4'' at line 1' in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php:28
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php(28): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php on line 28
+[14-May-2019 01:02:37 UTC] PHP Fatal error:  Call to undefined function json_ecode() in /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php on line 30
+[14-May-2019 01:02:37 UTC] PHP Stack trace:
+[14-May-2019 01:02:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/final/api/reservation.php:0
+[14-May-2019 01:23:36 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/final/api/addSingleAppointment.php:23
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/addSingleAppointment.php(23): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/addSingleAppointment.php on line 23
+[14-May-2019 01:24:29 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336-sp2019/final/api/addSingleAppointment.php:23
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/addSingleAppointment.php(23): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/addSingleAppointment.php on line 23
+[14-May-2019 01:36:03 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/ubuntu/workspace/cst336-sp2019/final/api/remove.php on line 31
+[14-May-2019 01:36:17 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/ubuntu/workspace/cst336-sp2019/final/api/remove.php on line 31
+[14-May-2019 01:36:37 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/cst336-sp2019/final/api/remove.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/remove.php(20): PDOStatement->execute(NULL)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/remove.php on line 20
+[14-May-2019 01:37:31 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Reservation.playlist' doesn't exist' in /home/ubuntu/workspace/cst336-sp2019/final/api/remove.php:32
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/remove.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/remove.php on line 32
+[14-May-2019 01:38:30 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/cst336-sp2019/final/api/remove.php:32
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/remove.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/remove.php on line 32
+[14-May-2019 01:38:46 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/cst336-sp2019/final/api/remove.php:32
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp2019/final/api/remove.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp2019/final/api/remove.php on line 32

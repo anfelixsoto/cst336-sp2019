@@ -123,6 +123,7 @@
                 }
                 
                 $(document).on('click','.addPlaylist',function(){
+                    console.log("working");
                     $.ajax({
                         type: "POST",
                         url: "api/addPlaylist.php",

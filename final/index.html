@@ -1,0 +1,168 @@
+<?php
+    session_start();
+    
+    if(!isset($_SESSION['user_id'])){
+        header("Location:login.html");
+    }
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title id="title">CST 336 - Final</title>
+        <link href="style/styles.css" rel="stylesheet" type="text/css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    </head>
+    
+    <style>
+        #appointments, td,th{
+            text-align: center;
+        }
+    </style>
+    <body>
+        <div class="heading" >
+            <div class = "left">
+            </div>
+            <div class = "center">
+                <div id = "text">
+                    <div id = "textCenter">Book An Appointment</div>
+                </div>
+            </div>
+            <div class ="right">
+                <div id="logout">
+                    <button type="button" class="btn btn-primary" id="loginBttn">Login</button>
+                </div>
+            </div>
+        </div>
+        <div class ="mainBody">
+            <div id = "user">
+            </div>
+            <div id = "historyFont">
+                <br>
+                <div id="dateSearch">
+                    Date: <input type="date" id="dateSearch"></input>
+                </div>
+                <br>
+                <div id="table">
+                    <table cellspacing="10" id="appointments">
+                        <th>Date</th>
+                        <th>Start Time</th>
+                        <th>Duration</th>
+                        <th>Booked by</th>
+                    </table>
+                </div>
+            </div>
+            <div id="history"></div><br>
+            <div id= "playlistHeader"></div>
+            <div><table id="playlist"></table></div><br>
+            </div>
+            <h3 id="alert"></h3>
+        </div>
+    </body>
+    <footer class = "bottomPart"></footer>
+    
+    <div class="modal fade" id="AppointmentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitle">Book Appointment</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                             <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="AppointmentBody"></div>
+                    </div>
+                    <div class="modal-footer" id="AppointmentFooter"></div>
+                </div>
+            </div>
+        </div>
+    
+    <script>
+        /* global $ */
+        $(document).ready(function(){
+            
+            $("#dateSearch").on('change',function(){
+               console.log("working"); 
+            });
+            
+            var duration;
+            $.ajax({
+                type:"GET",
+                url: "api/getAppointments.php",
+                dataType:"json",
+                success:function(data,status){
+                    data.forEach(function(key){
+                      duration = key['end_time'] - key['start_time'];
+                          $("#appointments").append("<tr>" + 
+                      "<td>" + key['date'] + "</td>" + 
+                      "<td>" + key['start_time'] + "</td>" + 
+                      "<td>" + duration + "</td>" + 
+                      "<td> Not Booked </td>" + 
+                      "<td><button class='book' id='" + key['id'] + "'>Book</button></tr>");
+                  });
+                }
+            });
+            
+            $(document).on('click','.book',function(){
+                $("#AppointmentFooter").html("");
+                $("#AppointmentBody").html(" ");
+                $("#AppointmentModal").modal("show");
+                $("#AppointmentFooter").html(" ");
+                $("#AppointmentBody").append(`<form>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">@</span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Email" name="email">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="First and Last Name" name="name">
+                                </div>
+                            </form>`)
+                $("#AppointmentFooter").append("<button type='button' class='btn btn-secondary' data-dismiss='modal'>Cancel</button>");
+                $("#AppointmentFooter").append("<button type='button' class='reserve' id='" + $(this).attr("id") + "'</button>Book</button>");
+            });
+            
+            $(document).on('click','.reserve',function(){
+                $("#modalTitle").html("");
+                $("#AppointmentBody").html("");
+                $("#AppointmentFooter").html("");
+               console.log($(this).attr("id"));
+               console.log($("input[name='email']").val());
+               console.log($("input[name='name']").val());
+               $.ajax({
+                   type: "POST",
+                   url: "api/reservation.php",
+                   dataType: "json",
+                   data:{
+                       "appointment_id": $(this).attr("id"),
+                       "email": $("input[name='email']").val(),
+                       "name": $("input[name='name']").val()
+                   }, success:function(data,status){
+                       if(data.isBooked == false){
+                           $("#AppointmentBody").append("Appointment has already been booked!").css("color","red");
+                       }else{
+                           $("#modalTitle").append("All Good!");
+                           $("#AppointmentBody").append("<p>Your appointment was booked! Please remember the dates and times below.</p>");
+                           $("#AppointmentBody").append("Start Time: " + data.date + " " + data.start_time + "<br>");
+                           $("#AppointmentBody").append("End Time: " + data.date + " " + data.end_time);
+                           $("#AppointmentFooter").append("<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>");
+                       }
+                   }
+               })
+            });
+            
+           $("#loginBttn").on('click',function(){
+               window.location = "login.html";
+           }); 
+        });
+    </script>
+    
+</html>
