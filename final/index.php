@@ -55,18 +55,19 @@
                     Invitation Link <input type="text" name="invationLink"/>
                 </div>
                 <div id="table">
-                    <table cellspacing="10" id="appointments">
+                    <h1 id="current">Current Appointment(s)</h1>
+                    <table width="950" id="appointments">
                         <th>Date</th>
                         <th>Start Time</th>
                         <th>Duration</th>
                         <th>Booked by</th>
-                        <th><a href='#' class="makeAppointment">Add Multiple Time Slots</a></th>
-                        <th><button type="button" class="btn btn-default" id="addSingleBttn">+</button></th>
+                        <!--<th><a href='#' class="makeAppointment">Add Multiple Time Slots</a></th>-->
+                        <th><button type="button" class="btn btn-default" id="addSingleBttn">Add Appointment</button></th>
                     </table>
                 </div>
             </div>
             <div id="history"></div><br>
-            <div id= "playlistHeader">Playlist</div>
+            <div id= "playlistHeader"></div>
             <div><table id="playlist"></table></div><br>
             </div>
             <h3 id="alert"></h3>
@@ -112,6 +113,7 @@
                 }
             });
             
+            var start;
             var duration;
             $.ajax({
               type:"GET",
@@ -119,17 +121,63 @@
               dataType:"json",
               success:function(data,status){
                   data.forEach(function(key){
-                      duration = key['end_time'] - key['start_time'];
-                      console.log(duration);
-                          $("#appointments").append("<tr>" + 
-                      "<td>" + convertDigitIn(key['date']) + "</td>" + 
-                      "<td>" + key['start_time'] + "</td>" + 
-                      "<td>" + duration + "</td>" + 
-                      "<td> Not Booked </td>" + 
-                      "<td><button class='detailsBttn' id='" + key['id'] + "'>Details</button>" + " " + 
-                      "<button class='deleteBttn' id='" + key['id'] + "'>Deleted</button></td></tr>");
+                      if(key['start_time'] > 1200){
+                            start = "A.M.Accounts";
+                        }else {
+                            start = "P.M.";
+                        }
+                      duration = (key['end_time'] - key['start_time'])/100;
+                        if(duration < 1){
+                            $("#appointments").append("<tr>" + 
+                            "<td>" + key['date'] + "</td>" + 
+                            "<td>" + (key['start_time']/100) + ":00" + " " + start + "</td>" +  
+                            "<td>" + (duration * 100) + " mins</td>" + " " +
+                            "<td> Not Booked </td>" + " " +
+                            "<td><button class='detailsBttn' id='" + key['id'] + "'>Details</button>" + " " + 
+                            "<button class='deleteBttn' id='" + key['id'] + "'>Deleted</button></td></tr>");
+                        }else {
+                            $("#appointments").append("<tr>" + 
+                            "<td>" + key['date'] + "</td>" + 
+                            "<td>" + (key['start_time']/100) + ":00" + " " + start + "</td>" +  
+                            "<td>" + duration + " hr(s)</td>" + " " +
+                            "<td> Not Booked </td>" + " " +
+                            "<td><button class='detailsBttn' id='" + key['id'] + "'>Details</button>" + " " + 
+                            "<button class='deleteBttn' id='" + key['id'] + "'>Deleted</button></td></tr>");
+                        }
                   });
               }
+            });
+            var end;
+            $(document).on('click','.detailsBttn',function(){
+                $("#AppointmentModal").modal("show");
+                $("#modalTitle").html("");
+                $("#AppointmentBody").html("");
+                $("#AppointmentFooter").html("");
+                $.ajax({
+                    type:"GET",
+                    url:"api/getSingleAppointment.php",
+                    dataType:"json",
+                    data:{"id":$(this).attr("id")},
+                    success:function(data,status){
+                        if(data.start_time > 1200){
+                            start = "A.M.Accounts";
+                        }else {
+                            start = "P.M.";
+                        }
+                        if(data.end_time > 1200){
+                            end = "A.M.Accounts";
+                        }else {
+                            end = "P.M.";
+                        }
+                        $("#modalTitle").append("Appointment Details");
+                        if(data.length != 0){
+                            $("#AppointmentBody").append("<p>Here are the appointment details</p>" + 
+                            "Start Time: " + data[0]['date'] + " " + (data[0]['start_time']/100) + ":00" + start + "<br></br>" +
+                            "End Time: " + data[0]['date'] + " " + (data[0]['end_time']/100) + ":00" + end);
+                            $("#AppointmentFooter").append("<button type='button' class='btn btn-secondary' data-dismiss='modal'>Cancel</button>");
+                        }
+                    }
+               })
             });
             
             $(document).on('click','.deleteBttn',function(){
@@ -143,16 +191,26 @@
                     dataType:"json",
                     data:{"id":$(this).attr("id")},
                     success:function(data,status){
+                        if(data.start_time > 1200){
+                            start = "A.M.Accounts";
+                        }else {
+                            start = "P.M.";
+                        }
+                        if(data.end_time > 1200){
+                            end = "A.M.Accounts";
+                        }else {
+                            end = "P.M.";
+                        }
                         $("#modalTitle").append("Delete Appointment");
                         if(data.length != 0){
-                            $("#AppointmentBody").append("Start Time: " + data[0]['date'] + " " + data[0]['start_time'] + "<br></br>" +
-                            "End Time: " + data[0]['date'] + " " + data[0]['end_time'] + "<br></br>" +
+                            $("#AppointmentBody").append("Start Time: " + data[0]['date'] + " " + (data[0]['start_time']/100) + ":00" + " " + start + "<br></br>" +
+                            "End Time: " + data[0]['date'] + " " + (data[0]['end_time']/100) + ":00" + end + "<br></br>" +
                             "<p>Are you sure you want to remove the time slot? This cannot be undone.</p>");
                             $("#AppointmentFooter").append("<button type='button' class='btn btn-secondary' data-dismiss='modal'>Cancel</button>");
                             $("#AppointmentFooter").append("<button type='button' class='removeBttn' id='" + data[0]['id'] + "'>Yes! Remove it!</button>");
                         }
                     }
-               })
+               });
                
             });
             
@@ -180,21 +238,22 @@
                 window.location = "logout.php";  
             });
             
-            $(document).on('click','.makeAppointment',function(){
-               $("#AppointmentModal").modal("show");
-               $("#modalTitle").html("");
-               $("#AppointmentBody").html("");
-               $("#AppointmentFooter").html("");
-               $("#modalTitle").append("Add Time Slot");
-               $("#AppointmentBody").append("Start Date <input type='date' name='startDate'></><br></br>");
-               $("#AppointmentBody").append("End Date <input type='date' name='endDate'></><br></br>");
-               $("#AppointmentBody").append("Start Time <input type='number' name='startTime' min='1' max='12'><br></br>");
-               $("#AppointmentBody").append("Number of Appointments <input type='number' name='duration' min='1' max='12'><br></br>");
-               $("#AppointmentBody").append("Length of Appointmets <input type='number' name='duration' min='1' max='12'><br>");
-               $("#AppointmentBody").append("<p>An appointment slot will be created for amount of time specified starting at the time of day specified for each day between the Start Date and the Ends Date</p>");
-               $("#AppointmentFooter").append("<button type='button' class='btn btn-secondary' data-dismiss='modal'>Cancel</button>");
-               $("#AppointmentFooter").append("<button type='button' class='btn btn-info' class='add'>Add Times</button>");
-            });
+            // $(document).on('click','.makeAppointment',function(){
+            //   $("#AppointmentModal").modal("show");
+            //   $("#modalTitle").html("");
+            //   $("#AppointmentBody").html("");
+            //   $("#AppointmentFooter").html("");
+            //   $("#modalTitle").append("Add Time Slots - Wasn't able to make it work");
+            //   $("#AppointmentBody").append("Start Date <input type='date' name='startDate'></><br></br>");
+            //   $("#AppointmentBody").append("End Date <input type='date' name='endDate'></><br></br>");
+            //   $("#AppointmentBody").append("Start Time <input type='number' name='startTime' min='1' max='12'><br></br>");
+            //   $("#AppointmentBody").append("Number of Appointments <input type='number' name='duration' min='1' max='12'><br></br>");
+            //   $("#AppointmentBody").append("Length of Appointmets <input type='number' name='duration' min='1' max='12'><br>");
+            //   $("#AppointmentBody").append("<p>An appointment slot will be created for amount of time specified starting at the time of day specified for each day between the Start Date and the Ends Date</p>");
+            //   $("#AppointmentFooter").append("<button type='button' class='btn btn-secondary' data-dismiss='modal'>Cancel</button>");
+            //   $("#AppointmentFooter").append("<button type='button' class='btn btn-info' id='add'>Add Times</button>");
+            // });
+        
             
             $("#addSingleBttn").on('click',function(){
               $("#AppointmentModal").modal("show");

@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.5.57, for debian-linux-gnu (x86_64)
 --
--- Host: 0.0.0.0    Database: pixabay
+-- Host: 0.0.0.0    Database: Reservation
 -- ------------------------------------------------------
 -- Server version	5.5.57-0ubuntu0.14.04.1
 
@@ -16,28 +16,83 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `images`
+-- Table structure for table `appointment`
 --
 
-DROP TABLE IF EXISTS `images`;
+DROP TABLE IF EXISTS `appointment`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `images` (
-  `search_name` char(255) NOT NULL,
-  `image_id` int(15) NOT NULL,
-  `image_url` char(255) NOT NULL,
-  `favorite` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `appointment` (
+  `id` int(50) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `start_time` int(5) NOT NULL,
+  `end_time` int(5) NOT NULL,
+  `date` varchar(512) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `images`
+-- Dumping data for table `appointment`
 --
 
-LOCK TABLES `images` WRITE;
-/*!40000 ALTER TABLE `images` DISABLE KEYS */;
-INSERT INTO `images` VALUES ('otter',1438381,'https://pixabay.com/get/e831b2072bfc003ed1584d05fb1d4794e174e2dc19b80c4090f5c471aee9b5bbde_1280.jpg',1),('otter',365370,'https://pixabay.com/get/ea33b40c2ff41c22d2524518b74d4494e077ebd510ac104490f5c970a1ecbcbc_1280.jpg',1);
-/*!40000 ALTER TABLE `images` ENABLE KEYS */;
+LOCK TABLES `appointment` WRITE;
+/*!40000 ALTER TABLE `appointment` DISABLE KEYS */;
+INSERT INTO `appointment` VALUES (2,1,500,700,'2019-05-18'),(3,1,600,700,'2019-06-10'),(4,1,1000,1200,'1926-06-20'),(8,1,700,730,'2020-02-13');
+/*!40000 ALTER TABLE `appointment` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `booked`
+--
+
+DROP TABLE IF EXISTS `booked`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `booked` (
+  `id` int(50) NOT NULL AUTO_INCREMENT,
+  `appointment_id` int(215) NOT NULL,
+  `email` varchar(251) NOT NULL,
+  `name` varchar(251) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `appointment_id` (`appointment_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `booked`
+--
+
+LOCK TABLES `booked` WRITE;
+/*!40000 ALTER TABLE `booked` DISABLE KEYS */;
+/*!40000 ALTER TABLE `booked` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(512) NOT NULL,
+  `password` varchar(512) NOT NULL,
+  `name` char(251) NOT NULL,
+  PRIMARY KEY (`user_id`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user`
+--
+
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (1,'anfelix@csumb.edu','$2y$11$q4JDzJI1x3abF43lWC0XcOt0bjBu3GmbqMKzGgeDmsDck0qDBPxnq','Antonio Felix');
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -49,4 +104,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-04-22 20:54:01
+-- Dump completed on 2019-05-14  2:04:05

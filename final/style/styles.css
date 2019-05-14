@@ -91,6 +91,10 @@ footer{
     font-size:10px;
 }
 
+#current{
+    text-align:center;
+}
+
 .deleteBttn, .removeBttn{
     border: none;
     text-align: center;
@@ -99,6 +103,17 @@ footer{
     font-size: 16px;
     border-radius: 5px;
     background-color: red;
+    color: white;
+}
+
+.detailsBttn, #addSingleBttn, .book, .reserve{
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: blue;
     color: white;
 }
 

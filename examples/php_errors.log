@@ -16,3 +16,6 @@ Stack trace:
 [24-Apr-2019 22:39:31 UTC] PHP Fatal error:  Class 'Google_Client' not found in /home/ubuntu/workspace/cst336-sp2019/examples/Google/verify.php on line 19
 [24-Apr-2019 22:39:31 UTC] PHP Stack trace:
 [24-Apr-2019 22:39:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/examples/Google/verify.php:0
+[14-May-2019 02:21:18 UTC] PHP Fatal error:  Class 'Google_Client' not found in /home/ubuntu/workspace/cst336-sp2019/examples/Google/verify.php on line 19
+[14-May-2019 02:21:18 UTC] PHP Stack trace:
+[14-May-2019 02:21:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp2019/examples/Google/verify.php:0

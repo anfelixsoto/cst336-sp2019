@@ -47,7 +47,7 @@
                 </div>
                 <br>
                 <div id="table">
-                    <table cellspacing="10" id="appointments">
+                    <table id="appointments" width="950">
                         <th>Date</th>
                         <th>Start Time</th>
                         <th>Duration</th>
@@ -89,6 +89,8 @@
                console.log("working"); 
             });
             
+            var start;
+            var end;
             var duration;
             $.ajax({
                 type:"GET",
@@ -96,13 +98,27 @@
                 dataType:"json",
                 success:function(data,status){
                     data.forEach(function(key){
-                      duration = key['end_time'] - key['start_time'];
-                          $("#appointments").append("<tr>" + 
-                      "<td>" + key['date'] + "</td>" + 
-                      "<td>" + key['start_time'] + "</td>" + 
-                      "<td>" + duration + "</td>" + 
-                      "<td> Not Booked </td>" + 
-                      "<td><button class='book' id='" + key['id'] + "'>Book</button></tr>");
+                        duration = (key['end_time'] - key['start_time'])/100;
+                        if(key['start_time'] > 1200){
+                            start = "A.M.Accounts";
+                        }else {
+                            start = "P.M.";
+                        }
+                        if(duration < 1){
+                            $("#appointments").append("<tr>" + 
+                            "<td>" + key['date'] + "</td>" + 
+                            "<td>" + (key['start_time']/100) + ":00" + " " + start + "</td>" + 
+                            "<td>" + (duration * 100) + " mins</td>" + " " +
+                            "<td> Not Booked </td>" + " " +
+                            "<td><button class='book' id='" + key['id'] + "'>Book</button></tr>");
+                        }else {
+                            $("#appointments").append("<tr>" + 
+                            "<td>" + key['date'] + "</td>" + 
+                            "<td>" + (key['start_time']/100) + ":00" + " " + start + "</td>" +
+                            "<td>" + duration + "hr(s)</td>" + " " +
+                            "<td> Not Booked </td>" + " " +
+                            "<td><button class='book' id='" + key['id'] + "'>Book</button></tr>");
+                        }
                   });
                 }
             });
@@ -134,9 +150,7 @@
                 $("#modalTitle").html("");
                 $("#AppointmentBody").html("");
                 $("#AppointmentFooter").html("");
-               console.log($(this).attr("id"));
-               console.log($("input[name='email']").val());
-               console.log($("input[name='name']").val());
+                
                $.ajax({
                    type: "POST",
                    url: "api/reservation.php",
@@ -146,13 +160,24 @@
                        "email": $("input[name='email']").val(),
                        "name": $("input[name='name']").val()
                    }, success:function(data,status){
+                       duration = (data.end_time - data.start_time)/100;
+                        if(data.start_time > 1200){
+                            start = "A.M.Accounts";
+                        }else {
+                            start = "P.M.";
+                        }
+                        if(data.end_time > 1200){
+                            end = "A.M.Accounts";
+                        }else {
+                            end = "P.M.";
+                        }
                        if(data.isBooked == false){
                            $("#AppointmentBody").append("Appointment has already been booked!").css("color","red");
                        }else{
                            $("#modalTitle").append("All Good!");
                            $("#AppointmentBody").append("<p>Your appointment was booked! Please remember the dates and times below.</p>");
-                           $("#AppointmentBody").append("Start Time: " + data.date + " " + data.start_time + "<br>");
-                           $("#AppointmentBody").append("End Time: " + data.date + " " + data.end_time);
+                           $("#AppointmentBody").append("Start Time: " + data.date + " " + (data.start_time/100) + ":00" + " " + end + "<br>");
+                           $("#AppointmentBody").append("End Time: " + data.date + " " + (data.end_time/100) + ":00" + " " + end);
                            $("#AppointmentFooter").append("<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>");
                        }
                    }
