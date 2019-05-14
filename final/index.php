@@ -121,8 +121,8 @@
               dataType:"json",
               success:function(data,status){
                   data.forEach(function(key){
-                      if(key['start_time'] > 1200){
-                            start = "A.M.Accounts";
+                      if(key['start_time'] < 1200){
+                            start = "A.M.";
                         }else {
                             start = "P.M.";
                         }
@@ -159,13 +159,13 @@
                     dataType:"json",
                     data:{"id":$(this).attr("id")},
                     success:function(data,status){
-                        if(data.start_time > 1200){
-                            start = "A.M.Accounts";
+                        if(data.start_time < 1200){
+                            start = "A.M.";
                         }else {
                             start = "P.M.";
                         }
-                        if(data.end_time > 1200){
-                            end = "A.M.Accounts";
+                        if(data.end_time < 1200){
+                            end = "A.M.";
                         }else {
                             end = "P.M.";
                         }
@@ -191,13 +191,13 @@
                     dataType:"json",
                     data:{"id":$(this).attr("id")},
                     success:function(data,status){
-                        if(data.start_time > 1200){
-                            start = "A.M.Accounts";
+                        if(data.start_time < 1200){
+                            start = "A.M.";
                         }else {
                             start = "P.M.";
                         }
-                        if(data.end_time > 1200){
-                            end = "A.M.Accounts";
+                        if(data.end_time < 1200){
+                            end = "A.M.";
                         }else {
                             end = "P.M.";
                         }
